@@ -38,7 +38,7 @@ Route::get('/testnew', function(){
     return view ('auth.verify-email');
 });
 
-Route::get('/',[Homepage::class, 'index'] )->name('homepage.show');
+Route::get('/',[Homepage::class, 'indexnew'] )->name('homepage.show');
 Route::get('/homepage',[Homepage::class, 'indexnew'] )->name('homepage.shownew');
 Route::get('/new',[Homepage::class, 'new'] );
 Route::get('/about',[Homepage::class, 'about'] )->name('about.show');
