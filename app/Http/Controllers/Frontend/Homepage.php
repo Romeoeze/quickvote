@@ -33,7 +33,7 @@ class Homepage extends Controller
      $contestmultis = Multicontest::with('vendor')->get();
 
     $brands = Logo::latest()->get();
-        return view('frontend.yes', compact('brands', 'contestmultis', 'contests'));
+        return view('frontend.home', compact('brands', 'contestmultis', 'contests'));
     }
 
 
