@@ -39,7 +39,7 @@ Route::get('/testnew', function(){
 });
 
 Route::get('/',[Homepage::class, 'index'] )->name('homepage.show');
-Route::get('/homepage',[Homepage::class, 'index'] )->name('homepage.shownew');
+Route::get('/homepage',[Homepage::class, 'indexnew'] )->name('homepage.shownew');
 Route::get('/new',[Homepage::class, 'new'] );
 Route::get('/about',[Homepage::class, 'about'] )->name('about.show');
 Route::get('/contact',[Homepage::class, 'contact'] )->name('contact.show');
