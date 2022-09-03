@@ -37,8 +37,8 @@ class Homepage extends Controller
 
     public function indexnew(){
 
-       
-        return view('frontend.yes');
+        $brands = Logo::latest()->get();
+        return view('frontend.yes', compact('brands'));
     }
 
 
