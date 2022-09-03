@@ -38,10 +38,10 @@ class Homepage extends Controller
     public function indexnew(){
 
         // $contests = Contest::OrderBy('created_at', 'DESC')->with('vendor')->get()->shuffle()->all();
-       $sliderData = Slider::FindorFail(1);
+    //    $sliderData = Slider::FindorFail(1);
     //    $brands = Logo::latest()->get();
     //     $contestmultis = Multicontest::OrderBy('created_at', 'DESC')->with('vendor')->get()->shuffle()->all();
-        return view('frontend.yes', compact('brands'));
+        return view('frontend.yes');
     }
 
 
