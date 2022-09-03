@@ -8,7 +8,7 @@
 
 
 
-    @if (count($contests))
+    {{-- @if (count($contests))
         <section class="tf-trendy-collections tf-section">
             <div class="container">
                 <div class="row">
@@ -158,11 +158,7 @@
                 </div>
             </div>
         </section>
-    @endif
-
-
-
-
+    @endif --}}
 
 
 
@@ -281,8 +277,8 @@
                 <div class="col-12 col-lg-6 col-xl-5">
                     <div>
                         <!-- <span class="badge badge-primary-soft p-2">
-                                                                                                                                                                              <i class="la la-exclamation ic-3x rotation"></i>
-                                                                                                                                                                          </span> -->
+                                                                                                                                                                                  <i class="la la-exclamation ic-3x rotation"></i>
+                                                                                                                                                                              </span> -->
                         <h6 style="color:rgb(214, 203, 203)">Trusted By</h6><br>
                         <div class="slider_r">
                             <div class="slide-track">
