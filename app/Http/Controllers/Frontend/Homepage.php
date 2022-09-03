@@ -37,11 +37,8 @@ class Homepage extends Controller
 
     public function indexnew(){
 
-        $contests = Contest::OrderBy('created_at', 'DESC')->with('vendor')->all();
-       $sliderData = Slider::FindorFail(1);
-       $brands = Logo::latest()->get();
-        $contestmultis = Multicontest::OrderBy('created_at', 'DESC')->with('vendor')->get()->shuffle()->all();
-        return view('frontend.homepage', compact('sliderData', 'brands', 'contests', 'contestmultis'));
+       
+        return view('frontend.yes');
     }
 
 
