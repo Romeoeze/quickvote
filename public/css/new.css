@@ -1,0 +1,12 @@
+
+.new {
+    color: rgb(0, 0, 0) !important;
+    background-color: rgba(255, 166, 0, 0.986) !important;
+    border-color: #ff7f06 !important;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #e63838;
+    border-color: #fc3908;
+}

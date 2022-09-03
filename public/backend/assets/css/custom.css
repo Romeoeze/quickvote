@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+a,
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Urbanist", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 15px;
+    font-weight: 500 !important;
+}
+
+body[data-topbar="dark"] #page-topbar {
+    background-color: black !important;
+}
+
+.mm-active .active {
+    color: #fd9104 !important;
+}
+
+.mm-active > a {
+    color: #0b0c0c !important;
+}
+
+.mm-active > a i {
+    color: #fc6107 !important;
+}
+
+.mm-active > i {
+    color: #020202 !important;
+}
+
+.mm-active {
+    color: #060707 !important;
+}
+
+.mm-active .active i {
+    color: #fc6107 !important;
+}
+
+.mm-active .active a {
+    color: #fc6107 !important;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1),
+        0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1),
+        0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12),
+        0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+}
+.l-bg-cherry {
+    background: linear-gradient(to right, #493240, #f09) !important;
+    color: #fff;
+}
+
+.l-bg-blue-dark {
+    background: linear-gradient(to right, #373b44, #4286f4) !important;
+    color: #fff;
+}
+
+.l-bg-green-dark {
+    background: linear-gradient(to right, #0a504a, #38ef7d) !important;
+    color: #fff;
+}
+
+.l-bg-orange-dark {
+    background: linear-gradient(to right, #a86008, #ffba56) !important;
+    color: #fff;
+}
+
+.card .card-statistic-3 .card-icon-large .fas,
+.card .card-statistic-3 .card-icon-large .far,
+.card .card-statistic-3 .card-icon-large .fab,
+.card .card-statistic-3 .card-icon-large .fal {
+    font-size: 110px;
+}
+
+.card .card-statistic-3 .card-icon {
+    text-align: center;
+    line-height: 50px;
+    margin-left: 15px;
+    color: rgb(250, 250, 250);
+    position: absolute;
+    right: -5px;
+    top: 20px;
+    opacity: 0.1;
+}
+
+.l-bg-cyan {
+    background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+    color: #fff !important;
+}
+
+.l-bg-green {
+    background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%) !important;
+    color: #fff !important;
+}
+
+.l-bg-orange {
+    background: linear-gradient(to right, #f9900e, #ffba56) !important;
+    color: #fff !important;
+}
+
+.l-bg-cyan {
+    background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+    color: #fff !important;
+}
+
+.carddd h2 {
+    color: #fff !important;
+}
+
+.carddd h5 {
+    color: #fff !important;
+}
+
+.menu-title {
+    padding: 12px 20px !important;
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    cursor: default;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(170, 97, 2);
+    font-weight: 900;
+    opacity: 0.7;
+    font-family: "Urbanist", sans-serif;
+}
+
+#sidebar-menu ul li a {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600 !important;
+    color: black;
+}
+
+.contestantbox {
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 4px 4px 60px rgb(99 69 237 / 15%);
+    border-radius: 30px;
+    width: 30%;
+    margin: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Urbanist", sans-serif !important;
+    font-weight: 700;
+}
+
+.order-card {
+    color: #fff;
+}
+
+.bg-c-blue {
+    background: linear-gradient(45deg, #4099ff, #73b4ff);
+}
+
+.bg-c-green {
+    background: linear-gradient(45deg, #2ed8b6, #59e0c5);
+}
+
+.bg-c-yellow {
+    background: linear-gradient(45deg, #ffb64d, #ffcb80);
+}
+
+.bg-c-pink {
+    background: linear-gradient(45deg, #ff5370, #ff869a);
+}
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+    box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.card .card-block {
+    padding: 25px;
+}
+
+.order-card i {
+    font-size: 26px;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
+.profile-container
+    .profile-header
+    .profile-stats
+    .inlinestats-col:not(:last-child) {
+    border-right: 1px solid #eee;
+    font-family: "Urbanist", sans-serif !important;
+    font-weight: 700;
+}
+.profile-container .profile-header .profile-stats .inlinestats-col {
+    padding-top: 15px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    min-height: 55px;
+    font-family: "Urbanist", sans-serif !important;
+    font-weight: 700;
+}
+.profile-container .profile-header .profile-stats .stats-col .stats-value {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Urbanist", sans-serif !important;
+    font-weight: 700;
+}
+.pink {
+    color: #e6740a !important;
+    font-family: "Urbanist", sans-serif !important;
+}
+.profile-container .profile-header .profile-stats .stats-col:not(:last-child) {
+    border-right: 1px solid #eee;
+}
+.profile-container .profile-header .profile-stats .stats-col {
+    margin: 30px 0;
+    text-align: center;
+}
+.profile-container .profile-header .profile-stats {
+    min-height: 175px;
+    border-right: 1px solid #eee;
+}
+.profile-container .profile-header .profile-info .header-information {
+    line-height: 23px;
+    margin-top: 15px;
+    text-align: justify;
+}
+.profile-container .profile-header .profile-info .btn-follow {
+    position: absolute;
+    top: 45px;
+    right: 40px;
+}
+.btn-palegreen,
+.btn-palegreen:focus {
+    background-color: #a0d468 !important;
+    border-color: #a0d468;
+    color: #fff;
+}
+.profile-container .profile-header .profile-info .header-fullname {
+    font-family: "Urbanist", sans-serif !important;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 27px;
+    display: inline-block;
+}
+.profile-container .profile-header .profile-info {
+    min-height: 175px;
+    border-right: 1px solid #eee;
+    padding: 15px 40px 35px 0;
+}
+.profile-container .profile-header .header-avatar {
+    width: 125px;
+    height: 125px;
+    -webkit-border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 50%;
+    -moz-background-clip: padding;
+    border-radius: 50%;
+    background-clip: padding-box;
+    border: 5px solid #f5f5f5;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    margin: 25px auto;
+}
+.profile-container .profile-header {
+    min-height: 175px;
+    margin: 15px 15px 0;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    background-color: #fbfbfb;
+}
+
+.card {
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+
+.card {
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, 0.125);
+    border-radius: 1rem;
+}
+
+.card-body {
+    padding: 1.5rem 1.5rem;
+}
+.avatar-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    -webkit-box-align: left;
+    -ms-flex-align: left;
+    align-items: left;
+    color: #fff;
+    font-weight: 700;
+}
+
+.stats .badge {
+    font-size: 16px !important;
+}
+
+.summary .badge {
+    font-size: 16px !important;
+}
