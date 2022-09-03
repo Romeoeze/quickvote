@@ -39,9 +39,11 @@ class Homepage extends Controller
 
         // $contests = Contest::OrderBy('created_at', 'DESC')->with('vendor')->get()->shuffle()->all();
     //    $sliderData = Slider::FindorFail(1);
+ 
+     $contestmultis = Multicontest::with('vendor')->get();
+
     $brands = Logo::latest()->get();
-    //    $contestmultis = Multicontest::OrderBy('created_at', 'DESC')->with('vendor')->get();
-        return view('frontend.yes', compact('brands'));
+        return view('frontend.yes', compact('brands', 'contestmultis'));
     }
 
 
