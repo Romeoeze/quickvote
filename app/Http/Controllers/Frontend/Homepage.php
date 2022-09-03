@@ -25,17 +25,9 @@ use App\Models\CorporateSingleContestant;
 
 class Homepage extends Controller
 {
+ 
+
     public function index(){
-
-        $contests = Contest::OrderBy('created_at', 'DESC')->with('vendor')->get()->shuffle()->all();
-       $sliderData = Slider::FindorFail(1);
-       $brands = Logo::latest()->get();
-        $contestmultis = Multicontest::OrderBy('created_at', 'DESC')->with('vendor')->get()->shuffle()->all();
-        return view('frontend.homepage', compact('sliderData', 'brands', 'contests', 'contestmultis'));
-    }
-
-
-    public function indexnew(){
 
     $contests = Contest::with('vendor')->get();
      $contestmultis = Multicontest::with('vendor')->get();

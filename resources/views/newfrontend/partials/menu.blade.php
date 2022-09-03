@@ -7,10 +7,6 @@
 
 
             <li class="menu-item">
-                <a href="{{ route('homepage.shownew') }}">Homepage</a>
-
-            </li>
-            <li class="menu-item">
                 <a href="{{ route('about.show') }}">About Us</a>
 
             </li>
