@@ -334,7 +334,7 @@ if (Auth::user()->Role == 'Vendor') {
                                 Contest</a></li>
 
 
-                        @if (Auth::user()->Role == 'Vendor')
+                        {{-- @if (Auth::user()->Role == 'Vendor')
                             @php
                                 $vendor = App\Models\Vendor::where('user_id', $user)->first();
                                 $vendor_id = $vendor->id;
@@ -343,7 +343,7 @@ if (Auth::user()->Role == 'Vendor') {
                                     ->get();
                             @endphp
 
-                            @if (count($multicontests) > 0)
+                             @if (count($multicontests) > 0)
                                 <li>
                                     <a href="{{ route('corporatemulticontest.all') }}" class="waves-effect">
                                         <i class="ri-dashboard-line"></i><span
@@ -351,15 +351,7 @@ if (Auth::user()->Role == 'Vendor') {
                                         <span>My Contests</span>
                                     </a>
                                 </li>
-                            @else
-                                <li>
-                                    <a href="{{ route('corporatemulticontest.all') }}" class="waves-effect">
-                                        <i class="ri-dashboard-line"></i><span
-                                            class="badge rounded-pill bg-success float-end">0</span>
-                                        <span>My Contests</span>
-                                    </a>
-                                </li>
-                            @endif
+                            @endif 
 
                             <li>
                                 <a href="{{ route('corporatemulticontestcategoryadd.all') }}" class="waves-effect">
@@ -384,7 +376,7 @@ if (Auth::user()->Role == 'Vendor') {
                                     <span>Accredited Voters</span>
                                 </a>
                             </li>
-                        @endif
+                        @endif 
 
                     </ul>
                 </li>
@@ -414,7 +406,7 @@ if (Auth::user()->Role == 'Vendor') {
                     </li>
                 @endif --}}
 
-                {{-- @if (Auth::user()->Role == 'Vendor')
+                        {{-- @if (Auth::user()->Role == 'Vendor')
                     <li class="menu-title">PAYOUT</li>
                     @php
                         $vendor = App\Models\Vendor::where('user_id', $user)->first();
@@ -446,11 +438,11 @@ if (Auth::user()->Role == 'Vendor') {
 
 
 
-                <li>
-                    <a href="/" class="waves-effect" target="_blank">
-                        <i class="ri-global-line"></i>QuickVote Homepage
-                    </a>
-                </li>
+                        <li>
+                            <a href="/" class="waves-effect" target="_blank">
+                                <i class="ri-global-line"></i>QuickVote Homepage
+                            </a>
+                        </li>
 
         </div>
         <!-- Sidebar -->
