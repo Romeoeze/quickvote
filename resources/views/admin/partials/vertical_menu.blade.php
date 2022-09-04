@@ -337,7 +337,7 @@ if (Auth::user()->Role == 'Vendor') {
                             @php
                                 $vendor = App\Models\Vendor::where('user_id', $user)->first();
                                 $vendor_id = $vendor->id;
-                                $multicontestsc = App\Models\CorporateMulticontest::with('vendor')
+                                $multicontestsc = App\Models\CorporateMultiContest::with('vendor')
                                     ->where('vendor_id', $vendor_id)
                                     ->get();
                             @endphp
