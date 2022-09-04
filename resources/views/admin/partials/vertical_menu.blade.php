@@ -147,7 +147,7 @@ if (Auth::user()->Role == 'Vendor') {
                                 Contest</a></li>
 
 
-                        {{-- @if (Auth::user()->Role == 'Vendor')
+                        @if (Auth::user()->Role == 'Vendor')
                             @php
                                 $vendor = App\Models\Vendor::where('user_id', $user)->first();
                                 $vendor_id = $vendor->id;
@@ -164,14 +164,14 @@ if (Auth::user()->Role == 'Vendor') {
                                         <span>My Contests</span>
                                     </a>
                                 </li>
-                            @endif 
+                            @endif
                             <li>
                                 <a href="{{ route('contestant.add') }}" class="waves-effect">
                                     <i class="ri-file-add-fill"></i>
                                     <span>Add Contestants</span>
                                 </a>
                             </li>
-                        @endif --}}
+                        @endif
 
                     </ul>
                 </li>
