@@ -396,6 +396,8 @@ if (Auth::user()->Role == 'Vendor') {
                         $multicontests = App\Models\CorporateMulticontest::with('vendor')
                             ->where('vendor_id', $vendor_id)
                             ->get();
+                        
+                        $payouts = App\Models\RequestPayout::where('vendor_id', $vendor_id)->get();
                     @endphp
 
                     <li>
@@ -403,19 +405,11 @@ if (Auth::user()->Role == 'Vendor') {
                             <i class="ri-line-chart-line"></i> Check Contest Results
                         </a>
                     </li>
-                @endif
 
-                @if (Auth::user()->Role == 'Vendor')
+
+
                     <li class="menu-title">PAYOUT</li>
-                    @php
-                        $vendor = App\Models\Vendor::where('user_id', $user)->first();
-                        $vendor_id = $vendor->id;
-                        $multicontests = App\Models\CorporateMulticontest::with('vendor')
-                            ->where('vendor_id', $vendor_id)
-                            ->get();
-                        $payouts = App\Models\RequestPayout::where('vendor_id', $vendor_id)->get();
-                        
-                    @endphp
+
 
                     <li>
                         <a href="{{ route('payout.add') }}" class="waves-effect" target="">
