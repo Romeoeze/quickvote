@@ -38,14 +38,14 @@ if (Auth::user()->Role == 'Vendor') {
             <ul class="metismenu list-unstyled" id="side-menu">
 
 
-                {{-- @if (Auth::user()->Role == 'Vendor')
+                @if (Auth::user()->Role == 'Vendor')
                     <li>
                         <a href="{{ route('contest.create') }}" class="waves-effect">
                             <i class="ri-dashboard-line"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
-                @endif --}}
+                @endif
 
 
                 @if (Auth::user()->Role == 'Admin')
