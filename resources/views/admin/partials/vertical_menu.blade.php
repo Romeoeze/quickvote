@@ -102,7 +102,7 @@ if (Auth::user()->Role == 'Vendor') {
                 @endif
 
 
-                {{-- @if (Auth::user()->Role == 'Vendor')
+                @if (Auth::user()->Role == 'Vendor')
                     <li class="menu-title">Vendor menu</li>
 
                     <li>
@@ -123,7 +123,7 @@ if (Auth::user()->Role == 'Vendor') {
 
                         </ul>
                     </li>
-                @endif --}}
+                @endif
 
 
 
