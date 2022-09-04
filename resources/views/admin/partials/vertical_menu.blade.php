@@ -431,6 +431,14 @@ if (Auth::user()->Role == 'Vendor') {
                                 <span>My Payouts</span>
                             </a>
                         </li>
+                    @else
+                        <li>
+                            <a href="{{ route('payout.all') }}" class="waves-effect">
+                                <i class="ri-pie-chart-line"></i><span
+                                    class="badge rounded-pill bg-success float-end">0</span>
+                                <span>My Payouts</span>
+                            </a>
+                        </li>
                     @endif
                 @endif
 
