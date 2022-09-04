@@ -164,6 +164,14 @@ if (Auth::user()->Role == 'Vendor') {
                                         <span>My Contests</span>
                                     </a>
                                 </li>
+                            @else
+                                <li>
+                                    <a href="{{ route('contest.all') }}" class="waves-effect">
+                                        <i class="ri-dashboard-line"></i><span
+                                            class="badge rounded-pill bg-success float-end">0</span>
+                                        <span>My Contests</span>
+                                    </a>
+                                </li>
                             @endif
                             <li>
                                 <a href="{{ route('contestant.add') }}" class="waves-effect">
