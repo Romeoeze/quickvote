@@ -385,10 +385,7 @@ if (Auth::user()->Role == 'Vendor') {
 
 
 
-
-
-
-                @if (Auth::user()->Role == 'Vendor')
+                {{-- @if (Auth::user()->Role == 'Vendor')
                     <li class="menu-title">RESULTS</li>
                     @php
                         $vendor = App\Models\Vendor::where('user_id', $user)->first();
@@ -434,7 +431,7 @@ if (Auth::user()->Role == 'Vendor') {
                             </a>
                         </li>
                     @endif
-                @endif
+                @endif --}}
 
 
 
