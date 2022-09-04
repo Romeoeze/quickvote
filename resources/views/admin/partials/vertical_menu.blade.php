@@ -156,7 +156,7 @@ if (Auth::user()->Role == 'Vendor') {
                                     ->get();
                             @endphp
 
-                            @if (count($contests) > 0)
+                            {{-- @if (count($contests) > 0)
                                 <li>
                                     <a href="{{ route('contest.all') }}" class="waves-effect">
                                         <i class="ri-dashboard-line"></i><span
@@ -164,7 +164,7 @@ if (Auth::user()->Role == 'Vendor') {
                                         <span>My Contests</span>
                                     </a>
                                 </li>
-                            @endif
+                            @endif --}}
                             <li>
                                 <a href="{{ route('contestant.add') }}" class="waves-effect">
                                     <i class="ri-file-add-fill"></i>
@@ -201,7 +201,7 @@ if (Auth::user()->Role == 'Vendor') {
                                     ->where('vendor_id', $vendor_id)
                                     ->get();
                             @endphp
-                            @if (count($multicontests) > 0)
+                            {{-- @if (count($multicontests) > 0)
                                 <li>
                                     <a href="{{ route('multicontest.all') }}" class="waves-effect">
                                         <i class="ri-dashboard-line"></i><span
@@ -209,7 +209,7 @@ if (Auth::user()->Role == 'Vendor') {
                                         <span>My Contests</span>
                                     </a>
                                 </li>
-                            @endif
+                            @endif --}}
 
                             <li>
                                 <a href="{{ route('multicontestcategoryadd.all') }}" class="waves-effect">
@@ -264,7 +264,7 @@ if (Auth::user()->Role == 'Vendor') {
                                     ->where('vendor_id', $vendor_id)
                                     ->get();
                             @endphp
-                            @if (count($corporatesinglecontests) > 0)
+                            {{-- @if (count($corporatesinglecontests) > 0)
                                 <li>
                                     <a href="{{ route('corporatesinglecontest.all') }}" class="waves-effect">
                                         <i class="ri-dashboard-line"></i><span
@@ -272,7 +272,7 @@ if (Auth::user()->Role == 'Vendor') {
                                         <span>My Contests</span>
                                     </a>
                                 </li>
-                            @endif
+                            @endif --}}
 
 
                             <li>
@@ -322,7 +322,7 @@ if (Auth::user()->Role == 'Vendor') {
                                     ->get();
                             @endphp
 
-                            @if (count($multicontests) > 0)
+                            {{-- @if (count($multicontests) > 0)
                                 <li>
                                     <a href="{{ route('corporatemulticontest.all') }}" class="waves-effect">
                                         <i class="ri-dashboard-line"></i><span
@@ -330,7 +330,7 @@ if (Auth::user()->Role == 'Vendor') {
                                         <span>My Contests</span>
                                     </a>
                                 </li>
-                            @endif
+                            @endif --}}
 
                             <li>
                                 <a href="{{ route('corporatemulticontestcategoryadd.all') }}" class="waves-effect">
@@ -405,7 +405,7 @@ if (Auth::user()->Role == 'Vendor') {
                         </a>
                     </li>
 
-                    @if (count($payouts) > 0)
+                    {{-- @if (count($payouts) > 0)
                         <li>
                             <a href="{{ route('payout.all') }}" class="waves-effect">
                                 <i class="ri-pie-chart-line"></i><span
@@ -413,7 +413,7 @@ if (Auth::user()->Role == 'Vendor') {
                                 <span>My Payouts</span>
                             </a>
                         </li>
-                    @endif
+                    @endif --}}
                 @endif
 
 
