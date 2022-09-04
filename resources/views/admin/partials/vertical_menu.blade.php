@@ -334,7 +334,7 @@ if (Auth::user()->Role == 'Vendor') {
                                 Contest</a></li>
 
 
-                        {{-- @if (Auth::user()->Role == 'Vendor')
+                        @if (Auth::user()->Role == 'Vendor')
                             @php
                                 $vendor = App\Models\Vendor::where('user_id', $user)->first();
                                 $vendor_id = $vendor->id;
@@ -343,7 +343,7 @@ if (Auth::user()->Role == 'Vendor') {
                                     ->get();
                             @endphp
 
-                             @if (count($multicontests) > 0)
+                            @if (count($multicontests) > 0)
                                 <li>
                                     <a href="{{ route('corporatemulticontest.all') }}" class="waves-effect">
                                         <i class="ri-dashboard-line"></i><span
@@ -351,7 +351,15 @@ if (Auth::user()->Role == 'Vendor') {
                                         <span>My Contests</span>
                                     </a>
                                 </li>
-                            @endif 
+                            @else
+                                <li>
+                                    <a href="{{ route('corporatemulticontest.all') }}" class="waves-effect">
+                                        <i class="ri-dashboard-line"></i><span
+                                            class="badge rounded-pill bg-success float-end">0</span>
+                                        <span>My Contests</span>
+                                    </a>
+                                </li>
+                            @endif
 
                             <li>
                                 <a href="{{ route('corporatemulticontestcategoryadd.all') }}" class="waves-effect">
@@ -376,7 +384,7 @@ if (Auth::user()->Role == 'Vendor') {
                                     <span>Accredited Voters</span>
                                 </a>
                             </li>
-                        @endif --}}
+                        @endif
 
                     </ul>
                 </li>
