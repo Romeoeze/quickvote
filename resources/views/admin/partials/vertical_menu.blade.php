@@ -155,13 +155,16 @@ if (Auth::user()->Role == 'Vendor') {
                                     ->where('vendor_id', $vendor_id)
                                     ->get();
                             @endphp
-                            <li>
-                                <a href="{{ route('contest.all') }}" class="waves-effect">
-                                    <i class="ri-dashboard-line"></i><span
-                                        class="badge rounded-pill bg-success float-end">{{ count($contests) }}</span>
-                                    <span>My Contests</span>
-                                </a>
-                            </li>
+
+                            @if (count($contests))
+                                <li>
+                                    <a href="{{ route('contest.all') }}" class="waves-effect">
+                                        <i class="ri-dashboard-line"></i><span
+                                            class="badge rounded-pill bg-success float-end">{{ count($contests) }}</span>
+                                        <span>My Contests</span>
+                                    </a>
+                                </li>
+                            @endif
                             <li>
                                 <a href="{{ route('contestant.add') }}" class="waves-effect">
                                     <i class="ri-file-add-fill"></i>
@@ -198,13 +201,15 @@ if (Auth::user()->Role == 'Vendor') {
                                     ->where('vendor_id', $vendor_id)
                                     ->get();
                             @endphp
-                            <li>
-                                <a href="{{ route('multicontest.all') }}" class="waves-effect">
-                                    <i class="ri-dashboard-line"></i><span
-                                        class="badge rounded-pill bg-success float-end">{{ count($multicontests) }}</span>
-                                    <span>My Contests</span>
-                                </a>
-                            </li>
+                            @if (count($multicontests))
+                                <li>
+                                    <a href="{{ route('multicontest.all') }}" class="waves-effect">
+                                        <i class="ri-dashboard-line"></i><span
+                                            class="badge rounded-pill bg-success float-end">{{ count($multicontests) }}</span>
+                                        <span>My Contests</span>
+                                    </a>
+                                </li>
+                            @endif
 
                             <li>
                                 <a href="{{ route('multicontestcategoryadd.all') }}" class="waves-effect">
@@ -259,13 +264,15 @@ if (Auth::user()->Role == 'Vendor') {
                                     ->where('vendor_id', $vendor_id)
                                     ->get();
                             @endphp
-                            <li>
-                                <a href="{{ route('corporatesinglecontest.all') }}" class="waves-effect">
-                                    <i class="ri-dashboard-line"></i><span
-                                        class="badge rounded-pill bg-success float-end">{{ count($corporatesinglecontests) }}</span>
-                                    <span>My Contests</span>
-                                </a>
-                            </li>
+                            @if (count($corporatesinglecontests))
+                                <li>
+                                    <a href="{{ route('corporatesinglecontest.all') }}" class="waves-effect">
+                                        <i class="ri-dashboard-line"></i><span
+                                            class="badge rounded-pill bg-success float-end">{{ count($corporatesinglecontests) }}</span>
+                                        <span>My Contests</span>
+                                    </a>
+                                </li>
+                            @endif
 
 
                             <li>
@@ -314,13 +321,16 @@ if (Auth::user()->Role == 'Vendor') {
                                     ->where('vendor_id', $vendor_id)
                                     ->get();
                             @endphp
-                            <li>
-                                <a href="{{ route('corporatemulticontest.all') }}" class="waves-effect">
-                                    <i class="ri-dashboard-line"></i><span
-                                        class="badge rounded-pill bg-success float-end">{{ count($multicontests) }}</span>
-                                    <span>My Contests</span>
-                                </a>
-                            </li>
+
+                            @if (count($multicontests))
+                                <li>
+                                    <a href="{{ route('corporatemulticontest.all') }}" class="waves-effect">
+                                        <i class="ri-dashboard-line"></i><span
+                                            class="badge rounded-pill bg-success float-end">{{ count($multicontests) }}</span>
+                                        <span>My Contests</span>
+                                    </a>
+                                </li>
+                            @endif
 
                             <li>
                                 <a href="{{ route('corporatemulticontestcategoryadd.all') }}" class="waves-effect">
