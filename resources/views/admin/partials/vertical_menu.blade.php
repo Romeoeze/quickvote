@@ -385,14 +385,12 @@ if (Auth::user()->Role == 'Vendor') {
 
 
 
-                {{-- @if (Auth::user()->Role == 'Vendor')
+
+
+
+                @if (Auth::user()->Role == 'Vendor')
                     <li class="menu-title">RESULTS</li>
                     @php
-                        $vendor = App\Models\Vendor::where('user_id', $user)->first();
-                        $vendor_id = $vendor->id;
-                        $multicontests = App\Models\CorporateMulticontest::with('vendor')
-                            ->where('vendor_id', $vendor_id)
-                            ->get();
                         
                         $payouts = App\Models\RequestPayout::where('vendor_id', $vendor_id)->get();
                     @endphp
@@ -431,7 +429,7 @@ if (Auth::user()->Role == 'Vendor') {
                             </a>
                         </li>
                     @endif
-                @endif --}}
+                @endif
 
 
 
