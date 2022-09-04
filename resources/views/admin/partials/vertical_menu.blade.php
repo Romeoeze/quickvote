@@ -333,7 +333,6 @@ if (Auth::user()->Role == 'Vendor') {
                         <li><a href="{{ route('contest.create') }}"><i class="ri-play-circle-line"></i> Create
                                 Contest</a></li>
 
-
                         {{-- @if (Auth::user()->Role == 'Vendor')
                             @php
                                 $vendor = App\Models\Vendor::where('user_id', $user)->first();
@@ -376,7 +375,7 @@ if (Auth::user()->Role == 'Vendor') {
                                     <span>Accredited Voters</span>
                                 </a>
                             </li>
-                        @endif 
+                        @endif --}}
 
                     </ul>
                 </li>
@@ -389,7 +388,7 @@ if (Auth::user()->Role == 'Vendor') {
 
 
 
-                {{-- @if (Auth::user()->Role == 'Vendor')
+                @if (Auth::user()->Role == 'Vendor')
                     <li class="menu-title">RESULTS</li>
                     @php
                         $vendor = App\Models\Vendor::where('user_id', $user)->first();
@@ -404,9 +403,9 @@ if (Auth::user()->Role == 'Vendor') {
                             <i class="ri-line-chart-line"></i> Check Contest Results
                         </a>
                     </li>
-                @endif --}}
+                @endif
 
-                        {{-- @if (Auth::user()->Role == 'Vendor')
+                @if (Auth::user()->Role == 'Vendor')
                     <li class="menu-title">PAYOUT</li>
                     @php
                         $vendor = App\Models\Vendor::where('user_id', $user)->first();
@@ -424,7 +423,7 @@ if (Auth::user()->Role == 'Vendor') {
                         </a>
                     </li>
 
-                     @if (count($payouts) > 0)
+                    @if (count($payouts) > 0)
                         <li>
                             <a href="{{ route('payout.all') }}" class="waves-effect">
                                 <i class="ri-pie-chart-line"></i><span
@@ -432,17 +431,17 @@ if (Auth::user()->Role == 'Vendor') {
                                 <span>My Payouts</span>
                             </a>
                         </li>
-                    @endif 
-                @endif --}}
+                    @endif
+                @endif
 
 
 
 
-                        <li>
-                            <a href="/" class="waves-effect" target="_blank">
-                                <i class="ri-global-line"></i>QuickVote Homepage
-                            </a>
-                        </li>
+                <li>
+                    <a href="/" class="waves-effect" target="_blank">
+                        <i class="ri-global-line"></i>QuickVote Homepage
+                    </a>
+                </li>
 
         </div>
         <!-- Sidebar -->
