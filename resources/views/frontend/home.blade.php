@@ -277,8 +277,8 @@
                 <div class="col-12 col-lg-6 col-xl-5">
                     <div>
                         <!-- <span class="badge badge-primary-soft p-2">
-                                                                                                                                                                                                          <i class="la la-exclamation ic-3x rotation"></i>
-                                                                                                                                                                                                      </span> -->
+                                                                                                                                                                                                              <i class="la la-exclamation ic-3x rotation"></i>
+                                                                                                                                                                                                          </span> -->
                         <h6 style="color:rgb(214, 203, 203)">Trusted By</h6><br>
                         <div class="slider_r">
                             <div class="slide-track">
@@ -390,8 +390,8 @@
                             class="form-submit">
                             <input name="email" value="" class="email" type="email"
                                 placeholder="Enter Email Address" required="">
-                            <button name="submit" type="submit" class="sc-button style letter style-2"><span>Browse
-                                    More</span> </button>
+                            <button name="submit" type="submit"
+                                class="sc-button style letter style-2"><span>Subscribe</span> </button>
                         </form>
                     </div>
                 </div>
