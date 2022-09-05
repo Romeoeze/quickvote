@@ -167,11 +167,11 @@
 
                 @foreach ($contestants as $con)
                     <div class="col-md-4">
-                        <a href=""><img class="img-thumbnail rounded-circle avatar-xlsrc=" src="{{ asset($con->image) }}"
-                                alt="Image" width="340px"></a><br>
+                        <a href=""><img class="img-thumbnail rounded-circle avatar-xlsrc="
+                                src="{{ asset($con->image) }}" alt="Image" width="340px"></a><br>
                         <h3 class="heading mt-4 mb-4">{{ $con->name }}</h3>
-                        <h3><a target="_blank" href="{{ route('contestant.vendor.show', $con->id) }}"><button
-                                    type="button" class="btn btn-primary waves-effect waves-light" style="font-size:12px;">
+                        <h3><a href="{{ route('contestant.vendor.show', $con->id) }}"><button type="button"
+                                    class="btn btn-primary waves-effect waves-light" style="font-size:12px;">
                                     View Contestant <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
                                 </button></a></h3>
                         <br><br><br><br>
