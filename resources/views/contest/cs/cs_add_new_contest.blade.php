@@ -28,7 +28,8 @@
 
 
 
-                    <form action="{{ route('corporatesinglecontest.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('corporatesinglecontest.store') }}" method="POST" data-parsley-validate
+                        enctype="multipart/form-data">
                         @csrf
                         <div class="p-3 py-5">
                             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -39,7 +40,7 @@
 
                                 <div class="col-md-12 mt-2 mb-2"><label class="labels">Contest Name</label><input
                                         type="text" class="form-control" value="{{ old('contest_name') }}"
-                                        placeholder="Enter Contest Name" name="contest_name"></div>
+                                        placeholder="Enter Contest Name" name="contest_name" required></div>
 
                                 @error('contest_name')
                                     <div class="alert alert-danger mt-2">{{ $message }}</div>
@@ -49,7 +50,8 @@
 
                                 <div class="col-md-12 mt-2 mb-2"><label class="labels">Start Date &
                                         Time</label><input type="datetime-local" class="form-control"
-                                        placeholder="Enter Your Email" value="{{ old('start_date') }}" name="start_date">
+                                        placeholder="Enter Your Email" value="{{ old('start_date') }}" name="start_date"
+                                        required>
                                 </div>
 
                                 @error('start_date')
@@ -58,7 +60,7 @@
 
                                 <div class="col-md-12 mt-2 mb-2"><label class="labels">End Date & Time</label><input
                                         type="datetime-local" class="form-control" placeholder="Enter Contest End Date"
-                                        value="{{ old('end_date') }}" name="end_date"></div>
+                                        value="{{ old('end_date') }}" name="end_date" required></div>
 
 
                                 @error('end_date')
@@ -72,7 +74,8 @@
                                 <div class="col-md-12 mt-4"> <label for="contest_image">Contest Preview Image <span
                                             style="font-size:10px; color:red;">(Recommeded Size: 1350X1350)</span></label>
                                     <div class="col-sm-12">
-                                        <input id="image" class="form-control" type="file" name="contest_image" />
+                                        <input id="image" class="form-control" type="file" name="contest_image"
+                                            required />
                                     </div>
                                     @error('contest_image')
                                         <div class="alert alert-danger mt-2">{{ $message }}</div>
@@ -87,7 +90,7 @@
 
                                     <label for="company_description" class="form-label">Contest Description</label>
 
-                                    <textarea id="elm1" name="contest_description" placeholder="Short Description about the contest"> {!! old('contest_description') !!}
+                                    <textarea required id="elm1" name="contest_description" placeholder="Short Description about the contest"> {!! old('contest_description') !!}
                                         </textarea>
 
                                 </div>

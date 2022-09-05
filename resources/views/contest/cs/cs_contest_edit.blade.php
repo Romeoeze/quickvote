@@ -29,7 +29,7 @@
 
 
                     <form action="{{ route('corporatesinglecontest.update', $contest->id) }}" method="POST"
-                        enctype="multipart/form-data">
+                        enctype="multipart/form-data" data-parsley-validate>
                         @csrf
                         <div class="p-3 py-5">
                             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -41,7 +41,7 @@
 
                                 <div class="col-md-12 mt-2 mb-2"><label class="labels">Contest Name</label><input
                                         type="text" class="form-control" value="{{ $contest->contest_name }}"
-                                        placeholder="Enter Contest Name" name="contest_name"></div>
+                                        placeholder="Enter Contest Name" name="contest_name" required></div>
 
                                 @error('contest_name')
                                     <div class="alert alert-danger mt-2">{{ $message }}</div>
@@ -50,7 +50,7 @@
                                 <div class="col-md-12 mt-2 mb-2"><label class="labels">Start Date &
                                         Time</label><input type="datetime-local" class="form-control"
                                         value="{{ \Carbon\Carbon::parse($contest->start_date)->format('Y-m-d\TH:i') }}"
-                                        name="start_date"></div>
+                                        name="start_date" required></div>
 
                                 @error('start_date')
                                     <div class="alert alert-danger mt-2">{{ $message }}</div>
@@ -59,7 +59,7 @@
                                 <div class="col-md-12 mt-2 mb-2"><label class="labels">End Date & Time</label><input
                                         type="datetime-local" class="form-control"
                                         value="{{ \Carbon\Carbon::parse($contest->end_date)->format('Y-m-d\TH:i') }}"
-                                        name="end_date"></div>
+                                        name="end_date" required></div>
 
                                 @error('end_date')
                                     <div class="alert alert-danger mt-2">{{ $message }}</div>
@@ -100,7 +100,7 @@
 
                                     <label for="company_description" class="form-label">Contest Description</label>
 
-                                    <textarea id="elm1" name="contest_description" placeholder="Short Description about the contest">
+                                    <textarea required id="elm1" name="contest_description" placeholder="Short Description about the contest">
 
                                         {{ $contest->contest_description }}
                                      

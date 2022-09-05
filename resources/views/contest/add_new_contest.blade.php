@@ -27,7 +27,8 @@
 
 
 
-                    <form action="{{ route('contest.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('contest.store') }}" method="POST" enctype="multipart/form-data"
+                        data-parsley-validate>
                         @csrf
                         <div class="p-3 py-5">
                             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -38,7 +39,7 @@
 
                                 <div class="col-md-12 mt-2 mb-2"><label class="labels">Contest Name</label><input
                                         type="text" class="form-control" value="{{ old('contest_name') }}"
-                                        placeholder="Enter Contest Name" name="contest_name"></div>
+                                        placeholder="Enter Contest Name" name="contest_name" required></div>
                                 @error('contest_name')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
@@ -47,14 +48,14 @@
 
                                 <div class="col-md-12 mt-2 mb-2"><label class="labels">Start Date</label><input
                                         type="date" class="form-control" placeholder="Enter Your Email"
-                                        value="{{ old('start_date') }}" name="start_date"></div>
+                                        value="{{ old('start_date') }}" name="start_date" required></div>
                                 @error('start_date')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
 
                                 <div class="col-md-12 mt-2 mb-2"><label class="labels">End Date</label><input type="date"
                                         class="form-control" placeholder="Enter Contest End Date"
-                                        value="{{ old('end_date') }}" name="end_date"></div>
+                                        value="{{ old('end_date') }}" name="end_date" required></div>
                                 @error('end_date')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
@@ -63,7 +64,7 @@
 
                                 <div class="col-md-12 mt-2 mb-2"><label class="labels">Price Per Vote</label><input
                                         type="number" class="form-control" value="{{ old('vote_price') }}"
-                                        placeholder="eg: 100" name="vote_price"></div>
+                                        placeholder="eg: 100" name="vote_price" required></div>
 
                                 @error('vote_price')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -79,7 +80,8 @@
                                 <div class="col-md-12 mt-4"> <label for="contest_image">Contest Preview Image <span
                                             style="font-size:10px; color:red;">(Recommeded Size: 1350X1350)</span></label>
                                     <div class="col-sm-12">
-                                        <input id="image" class="form-control" type="file" name="contest_image" />
+                                        <input id="image" class="form-control" type="file" name="contest_image"
+                                            required />
                                     </div>
 
 
@@ -97,7 +99,7 @@
 
                                     <label for="company_description" class="form-label">Contest Description</label>
 
-                                    <textarea id="elm1" name="contest_description" placeholder="Short Description about the contest">
+                                    <textarea id="elm1" required name="contest_description" placeholder="Short Description about the contest">
                                         {!! old('contest_description') !!}
                                            </textarea>
 

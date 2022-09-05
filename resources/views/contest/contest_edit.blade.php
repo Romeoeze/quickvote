@@ -25,7 +25,8 @@
 
 
 
-                    <form action="{{ route('contest.update', $contest->id) }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('contest.update', $contest->id) }}" method="POST" enctype="multipart/form-data"
+                        data-parsley-validate>
                         @csrf
                         <div class="p-3 py-5">
                             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -37,21 +38,22 @@
 
                                 <div class="col-md-12 mt-2 mb-2"><label class="labels">Contest Name</label><input
                                         type="text" class="form-control" value="{{ $contest->contest_name }}"
-                                        placeholder="Enter Contest Name" name="contest_name"></div>
+                                        placeholder="Enter Contest Name" name="contest_name" required></div>
                                 @error('contest_name')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
 
                                 <div class="col-md-12 mt-2 mb-2"><label class="labels">Start Date</label><input
                                         type="date" class="form-control" value="{{ $contest->start_date }}"
-                                        name="start_date"></div>
+                                        name="start_date" required></div>
 
                                 @error('start_date')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
 
                                 <div class="col-md-12 mt-2 mb-2"><label class="labels">End Date</label><input type="date"
-                                        class="form-control" value="{{ $contest->end_date }}" name="end_date"></div>
+                                        class="form-control" value="{{ $contest->end_date }}" name="end_date" required>
+                                </div>
 
                                 @error('end_date')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -61,7 +63,7 @@
 
                                 <div class="col-md-12 mt-2 mb-2"><label class="labels">Price Per Vote</label><input
                                         type="number" class="form-control" value="{{ $contest->vote_price }}"
-                                        name="vote_price"></div>
+                                        name="vote_price" required></div>
 
                                 @error('vote_price')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -96,7 +98,7 @@
 
                                     <label for="company_description" class="form-label">Contest Description</label>
 
-                                    <textarea id="elm1" name="contest_description" placeholder="Short Description about the contest">
+                                    <textarea id="elm1" required name="contest_description" placeholder="Short Description about the contest">
 
                                         {{ $contest->contest_description }}
                                      

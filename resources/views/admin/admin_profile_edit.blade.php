@@ -16,23 +16,22 @@
                     <div class="card-body">
                         <h3>Edit Profile</h3>
                         <form class="form-horizontal mt-3" method="POST" action="{{ route('admin.profile.store') }}"
-                            enctype="multipart/form-data">
+                            enctype="multipart/form-data" data-parsley-validate>
 
                             @csrf
                             <div class="row mb-3">
                                 <label for="name" class="col-sm-2 col-form-label">Name</label>
                                 <div class="col-sm-10">
                                     <input id="name" class="form-control" type="text" name="name"
-                                        value="{{ $profile_data->name }}" />
+                                        value="{{ $profile_data->name }}" required />
                                 </div>
                             </div>
 
 
                             <div class="row mb-3">
-                                <label for="email" class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
-                                    <input id="email" class="form-control" type="text" name="email"
-                                        value="{{ $profile_data->email }}" />
+                                    <input id="email" class="form-control" type="hidden" name="email"
+                                        value="{{ $profile_data->email }}" required readonly />
                                 </div>
                             </div>
 
@@ -40,7 +39,7 @@
                                 <label for="phonenumber" class="col-sm-2 col-form-label">Phone Number</label>
                                 <div class="col-sm-10">
                                     <input id="phonenumber" class="form-control" type="text" name="phonenumber"
-                                        value="{{ $profile_data->phonenumber }}" />
+                                        value="{{ $profile_data->phonenumber }}" required />
                                 </div>
                             </div>
 
