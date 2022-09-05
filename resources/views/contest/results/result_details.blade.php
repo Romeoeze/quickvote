@@ -151,7 +151,7 @@
                                         <div class="d-flex flex-column flex-lg-row">
                                             <span class="avatar avatar-text rounded-3 me-4 mb-2"> <img
                                                     src="{{ asset($cont->image) }}" alt="" class="header-avatar"
-                                                    style="max-width: 100px;border-radius:50%; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);"></span>
+                                                    style="max-width: 100px; height:100px; border-radius:50%; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);"></span>
                                             <div class="row flex-fill">
                                                 <div class="col-sm-6">
                                                     <h3> {{ $cont->name }} </h3>
