@@ -3631,4 +3631,16 @@ margin-top: 10px; */
         border-radius: 30px;
         width: 100%;
     }
+
+    .customLogo {
+        max-width: 100px !important;
+    }
+
+    .sc-button.wallet {
+        padding: 5px 5px !important;
+    }
+
+    .topbar {
+        display: none !important;
+    }
 }

@@ -10,7 +10,7 @@
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
     <title>QuickVote| Online Voting Platform for Paid & Free Contests</title>
 
-    <meta name="author" content="themesflat.com">
+    <meta name="author" content="toastnigeria.com">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -82,11 +82,10 @@
                             <div class="mobile-button"><span></span></div><!-- /.mobile-button -->
                             <div id="site-header-inner" class="flex">
                                 <div id="site-logo" class="clearfix">
-                                    <div id="site-logo-inner">
+                                    <div id="site-logo-inner" class="customLogo">
                                         <a href="{{ route('homepage.show') }}" class="main-logo">
                                             <img src="{{ asset('uploads/images/logo.png') }}" alt="Quickvote"
-                                                width="151" height="45" data-retina="images/logo.png"
-                                                data-width="151" data-height="45">
+                                                data-retina="images/logo.png">
 
                                         </a>
 
