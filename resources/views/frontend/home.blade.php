@@ -277,8 +277,8 @@
                 <div class="col-12 col-lg-6 col-xl-5">
                     <div>
                         <!-- <span class="badge badge-primary-soft p-2">
-                                                                                                                                                                                                              <i class="la la-exclamation ic-3x rotation"></i>
-                                                                                                                                                                                                          </span> -->
+                                                                                                                                                                                                                  <i class="la la-exclamation ic-3x rotation"></i>
+                                                                                                                                                                                                              </span> -->
                         <h6 style="color:rgb(214, 203, 203)">Trusted By</h6><br>
                         <div class="slider_r">
                             <div class="slide-track">
@@ -383,7 +383,7 @@
         <div class="container">
             <div class="new-letter-inner flex">
                 <div class="new-letter-content">
-                    <h3 class="heading">Newsletters</h3>
+                    <h3 class="heading">Quickvote Newsletters</h3>
                     <p class="sub-heading">Subscribe to our newsletters and receive the latest news from QuickVote.</p>
                     <div class="form-subcribe">
                         <form id="subscribe-form" action="#" method="GET" accept-charset="utf-8"
