@@ -38,6 +38,14 @@
 
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     @yield('css')
+
+    <style scoped>
+        @media screen and (max-width: 700px) {
+            .stats-value .badge {
+                font-size: 13px !important;
+            }
+        }
+    </style>
 </head>
 
 <body data-topbar="dark">
