@@ -20,7 +20,7 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" type="text/css" href="{{ asset('quickvote/assets/css/style.css') }}">
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('quickvote/assets/css/custommainpage.css') }}">
     <!-- Reponsive -->
     <link rel="stylesheet" type="text/css" href="{{ asset('quickvote/assets/css/responsive.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

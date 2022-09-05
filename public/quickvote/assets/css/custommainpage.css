@@ -1,0 +1,13 @@
+@media screen and (max-width: 767px) {
+    .customLogo {
+        max-width: 100px !important;
+    }
+
+    .sc-button.wallet {
+        padding: 6px 6px !important;
+    }
+
+    .topbar {
+        display: none !important;
+    }
+}
