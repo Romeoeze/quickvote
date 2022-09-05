@@ -70,7 +70,8 @@
 
                 </ul>
                 <div class="buy-button-box">
-                    <a href="{{ route('contest.select') }}"><button class="sc-button style letter style-2"><span>Create
+                    <a href="{{ route('contest.select') }}"><button
+                            class="sc-button style letter style-2 start"><span>Create
                                 Paid Contest <i class="ri-arrow-right-circle-line"></i></span> </button></a><br><br>
                 </div>
             </div>
@@ -183,7 +184,7 @@
 
                 <div class="buy-button-box">
                     <a href="{{ route('corporatesinglecontest.select') }}"><button
-                            class="sc-button2 style letter style-2"><span> Create
+                            class="sc-button2 style letter style-2 start"><span> Create
                                 Freemium Contest <i class="ri-arrow-right-circle-line"></i></span> </button></a><br><br>
                 </div>
             </div>

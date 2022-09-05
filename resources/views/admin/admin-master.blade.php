@@ -44,6 +44,10 @@
             .stats-value .badge {
                 font-size: 13px !important;
             }
+
+            .start span {
+                font-size: 15px !important;
+            }
         }
     </style>
 </head>
