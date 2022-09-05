@@ -27,23 +27,43 @@
 
 
             @auth()
-                <li class="menu-item menu-item-has-children ">
+                @if (Auth::user()->Role == 'Admin')
+                    <li class="menu-item menu-item-has-children ">
 
-                    <a href="{{ route('dashboard') }}"><i class="fa fa-user ss" aria-hidden="true"></i>
-                        {{ Auth::user()->name }}</a>
-                    <ul class="sub-menu">
-                        <li class="menu-item ">
-                            <form action="{{ route('logout') }}
+                        <a href="{{ route('dashboard') }}"><i class="fa fa-user ss" aria-hidden="true"></i>
+                            {{ Auth::user()->name }}</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item ">
+                                <form action="{{ route('logout') }}
                     " method="post">
-                                @csrf
-                                <button type="submit" class="sub">Logout <i class="fa fa-sign-out ss"
-                                        aria-hidden="true"></i></button>
-                        </li>
-                        </form>
+                                    @csrf
+                                    <button type="submit" class="sub">Logout <i class="fa fa-sign-out ss"
+                                            aria-hidden="true"></i></button>
+                            </li>
+                            </form>
 
-                </li>
+                    </li>
             </ul>
             </li>
+        @elseif (Auth::user()->Role == 'Vendor' || 'Voter')
+            <li class="menu-item menu-item-has-children ">
+
+                <a href="{{ route('contest.create') }}"><i class="fa fa-user ss" aria-hidden="true"></i>
+                    {{ Auth::user()->name }}</a>
+                <ul class="sub-menu">
+                    <li class="menu-item ">
+                        <form action="{{ route('logout') }}
+        " method="post">
+                            @csrf
+                            <button type="submit" class="sub">Logout <i class="fa fa-sign-out ss"
+                                    aria-hidden="true"></i></button>
+                    </li>
+                    </form>
+
+            </li>
+            </ul>
+            </li>
+            @endif
         @endauth
         </ul>
     </nav><!-- /#main-nav -->
