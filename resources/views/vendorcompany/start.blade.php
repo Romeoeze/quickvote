@@ -61,8 +61,10 @@
                     </li>
 
                     <li>
-                        <p><strong>Cost: </strong> 25% Service Charge Per Paid Vote Processed By Quickvote</p>
-                        <p><strong>Ideal For: </strong> PAGAENTS | AWARDS SHOWS | REALITY TV SHOWS</p>
+                        <p style="line-height: 18px;"><strong>Cost: </strong> 25% Service Charge Per Paid Vote Processed By
+                            Quickvote</p>
+                        <p style="line-height: 18px;"><strong>Ideal For: </strong> PAGAENTS | AWARDS SHOWS | REALITY TV
+                            SHOWS</p>
                     </li>
 
 
@@ -134,24 +136,25 @@
                         <p><i class="fas fa-times red-text pr-2"></i>Vendor Can Set Price Per Vote</p>
                     </li>
                     <li>
-                        <p><i class="
+                        <p><i
+                                class="
                                 
                                 
                                 
                                 
                                          fas fa-times red-text pr-2""></i>Voters
-                                                                                                    Pays
-                                                                                                    to
-                                                                                                    Vote</p>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <p class="
+                            Pays
+                            to
+                            Vote</p>
+                    </li>
+                    <li>
+                        <p class="
                                 
                                                 mt-2"><i
-                                    class="fas fa-check green-text pr-2"></i>Instant
-                                voting:
-                                Single & Multi
-                                Category.</p>
+                                class="fas fa-check green-text pr-2"></i>Instant
+                            voting:
+                            Single & Multi
+                            Category.</p>
                     </li>
                     <li>
                         <p><i class="fas fa-check green-text pr-2"></i>Support & Monitoring</p>
@@ -160,9 +163,11 @@
                         <p><i class="fas fa-check green-text pr-2"></i>Results Export</p>
                     </li>
                     <li>
-                        <p><strong>Cost: </strong> A One time setup fee of ₦ 1,000 per Voter (Pre-registered)
+                        <p style="line-height: 18px;"><strong>Cost: </strong> A One time setup fee of ₦ 1,000 per Voter
+                            (Pre-registered)
                             by your organization.</p>
-                        <p><strong>Ideal For: </strong> CORPORATE & NON-GOVERNMENTAL ORAGAINSATIONS</p>
+                        <p style="line-height: 18px;"> <strong>Ideal For: </strong> CORPORATE & NON-GOVERNMENTAL
+                            ORAGAINSATIONS</p>
                     </li>
 
 
