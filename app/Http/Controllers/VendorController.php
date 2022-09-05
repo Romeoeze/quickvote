@@ -170,6 +170,15 @@ public function ProfileStore (Request $request){
 
 
  if($request->file('image')){
+
+
+
+$request->validate([
+
+    'image' => 'required|image|mimes:jpeg,jpg,png|max:2000',
+     
+
+   ]);
         $file =$request->file('image');
         $filename = date('YmdHi') . $file->getClientOriginalName();
         $file->move(public_path('uploads/admin_images'), $filename);
@@ -186,6 +195,27 @@ public function ProfileStore (Request $request){
  return redirect()->back()->with( $notification);
 
 }
+
+
+
+
+
+// $file = $request->file('contest_image');
+// $filename = date('Ymdhi').'.' .$file->getClientOriginalName();
+
+
+// Image::make($file)->resize(1080,1080)->save('uploads/contests/'.$filename);
+// $fileurl = 'uploads/contests/'.$filename;
+
+// $contest->contest_image = $fileurl;
+
+
+
+
+
+
+
+
 
 
 public function ProfileChangePassword(){
