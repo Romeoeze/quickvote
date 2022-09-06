@@ -28,27 +28,32 @@
              </div>
              <div class="col-lg-2 col-md-6 col-sm-6 col-6">
                  <div class="widget widget-menu menu-marketplace">
-                     <h5 class="title-widget">Marketplace</h5>
+                     <h5 class="title-widget">Quick Links</h5>
                      <ul>
-                         <li><a href="item.html">Gaming </a></li>
-                         <li><a href="item.html">Product </a></li>
-                         <li><a href="item.html">All NFTs</a></li>
-                         <li><a href="item.html">Social Network</a></li>
-                         <li><a href="item.html">Domain Names</a></li>
-                         <li><a href="item.html">Collectibles</a></li>
+                         <li><a href="/">Homepage </a></li>
+                         <li><a href="{{ route('about.show') }}">About QuickVote </a></li>
+                         <li><a href="{{ route('admin.profile') }}">My Dashboard</a></li>
+                         <li><a href="/">Privacy Policy</a></li>
+                         <li><a href="/">Terms & Conditions</a></li>
+                         <li><a href="{{ route('contact.show') }}">Contact Us</a></li>
+
                      </ul>
+
+
+
+
+
+
+
                  </div>
              </div>
              <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                  <div class="widget widget-menu menu-supports">
-                     <h5 class="title-widget">Supports</h5>
+                     <h5 class="title-widget">Contests</h5>
                      <ul>
-                         <li><a href="contact.html">Setting & Privacy </a></li>
-                         <li><a href="contact.html">Help & Support </a></li>
-                         <li><a href="item.html">Live Auctions</a></li>
-                         <li><a href="item-details.html"> Item Details</a></li>
-                         <li><a href="contact.html"> 24/7 Supports</a></li>
-                         <li><a href="blog.html">Blog</a></li>
+                         <li><a href="{{ route('contest.create') }}">Create Contest</a></li>
+                         <li><a href="{{ route('contest.archive') }}">Live Contests</a></li>
+
                      </ul>
                  </div>
              </div>
