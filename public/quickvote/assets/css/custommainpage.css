@@ -11,3 +11,18 @@
         display: none !important;
     }
 }
+
+@media screen and (max-width: 567px) {
+    .customLogo {
+        max-width: 100px !important;
+    }
+
+    .sc-button.wallet {
+        padding: 6px 6px !important;
+        display: none !important;
+    }
+
+    .topbar {
+        display: none !important;
+    }
+}
