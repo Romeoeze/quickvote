@@ -83,18 +83,18 @@
                         <div class="form-create-item">
                             <div class="sc-heading">
                                 <h3>Send Us Message</h3>
-                                <p class="desc">Most popular gaming digital nft market place </p>
+                                <p class="desc">Most popular voting platform in Nigeria </p>
                             </div>
-                            <form id="create-item-1" action="./contact/contact-process.php" method="post"
-                                accept-charset="utf-8" novalidate="novalidate">
+                            <form id="create-item-1" action="" method="post" accept-charset="utf-8"
+                                novalidate="novalidate">
                                 <input type="text" id="name" class="tb-my-input" name="name" tabindex="1"
                                     placeholder="Your Full Name" value="" aria-required="true" required="">
                                 <input type="email" id="email" class="tb-my-input" name="email" tabindex="2"
                                     placeholder="Email Address" value="" aria-required="true" required="">
                                 <select class="valid">
-                                    <option value="1">Subject</option>
-                                    <option value="2">Subject</option>
-                                    <option value="3">Subject</option>
+                                    <option value="1">General Enquiry</option>
+                                    <option value="2">Technical Issues</option>
+                                    <option value="3">Partnerships</option>
                                 </select>
                                 <textarea id="comment-message" name="message" tabindex="4" placeholder="Write Message" aria-required="true"></textarea>
                                 <button name="submit" type="submit" id="comment-reply"
