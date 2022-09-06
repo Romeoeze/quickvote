@@ -26,7 +26,7 @@
                         <div class="swiper-container trendy">
                             <div class="swiper-wrapper">
 
-                                @foreach ($contests as $contest)
+                                @foreach ($contests->shuffle()->all() as $contest)
                                     <div class="swiper-slide">
                                         <div class="slider-item">
                                             <div class="sc-product-item style-2">
@@ -113,7 +113,7 @@
                         <div class="swiper-container live-auc">
                             <div class="swiper-wrapper">
 
-                                @foreach ($contestmultis as $contestmulti)
+                                @foreach ($contestmultis->shuffle()->all() as $contestmulti)
                                     <div class="swiper-slide">
                                         <div class="slider-item">
                                             <div class="sc-product-item">
@@ -277,13 +277,13 @@
                 <div class="col-12 col-lg-6 col-xl-5">
                     <div>
                         <!-- <span class="badge badge-primary-soft p-2">
-                                                                                                                                                                                                                  <i class="la la-exclamation ic-3x rotation"></i>
-                                                                                                                                                                                                              </span> -->
+                                                                                                                                                                                                                                  <i class="la la-exclamation ic-3x rotation"></i>
+                                                                                                                                                                                                                              </span> -->
                         <h6 style="color:rgb(214, 203, 203)">Trusted By</h6><br>
                         <div class="slider_r">
                             <div class="slide-track">
                                 @if (count($brands))
-                                    @foreach ($brands as $b)
+                                    @foreach ($brands->shuffle()->all() as $b)
                                         <div class="slide">
                                             <img src="{{ asset($b->logos) }}" height="50" width="70"
                                                 alt="" />

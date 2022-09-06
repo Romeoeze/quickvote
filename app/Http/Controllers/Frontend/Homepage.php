@@ -29,8 +29,9 @@ class Homepage extends Controller
 
     public function index(){
 
-    $contests = Contest::with('vendor')->get();
-     $contestmultis = Multicontest::with('vendor')->get();
+    $contests = Contest::where('end_date', '>=' , Carbon::now())->where('status', '=' , 1)->with('vendor')->get();
+    $contestmultis = Multicontest::where('end_date', '>=' , Carbon::now())->where('status', '=' , 1)->with('vendor')->get();
+ 
 
     $brands = Logo::latest()->get();
         return view('frontend.home', compact('brands', 'contestmultis', 'contests'));
