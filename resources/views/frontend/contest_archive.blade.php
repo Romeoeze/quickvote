@@ -14,7 +14,7 @@
                 <div class="col-md-12">
                     <div class="page-title-inner flex">
                         <div class="page-title-heading">
-                            <h2 class="heading">Contests | Archive</h2>
+                            <h2 class="heading">Live Contests</h2>
                         </div>
                         <div class="breadcrumbs">
                             <ul>
@@ -31,7 +31,7 @@
     <br><br><br>
 
     <div class="container">
-        @foreach ($contests->chunk(3) as $contest)
+        @forelse ($contests->chunk(3) as $contest)
             <div class="row">
                 @foreach ($contest as $con)
                     <div class="col-md-4">
@@ -77,13 +77,16 @@
                 <br>
 
             </div><br>
-        @endforeach
+        @empty
+            <br><br>
+            <p class="text-red">... No Active Contest Found.</p><br><br>
+        @endforelse
 
     </div>
 
 
-    <div class="pagi" style="width: 50%;
+    {{-- <div class="pagi" style="width: 50%;
         margin: 0 auto;">
         <h4 class="text-center">{{ $contests->links('pagination::custom') }}</h4><br><br><br>
-    </div>
+    </div> --}}
 @endsection
