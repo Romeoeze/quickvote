@@ -126,8 +126,11 @@ public function searchcontest (Request $request){
      
 
 public function contestarchive(){
-
-    $contests = Contest::OrderBy('created_at', 'DESC')->with('vendor')->paginate(6);
+    $contestssingle = Contest::where('end_date', '>=' , Carbon::now())->where('status', '=' , 1)->with('vendor')->get();
+    $contestmultis = Multicontest::where('end_date', '>=' , Carbon::now())->where('status', '=' , 1)->with('vendor')->get();
+ 
+    $contests =  $contestssingle->concat($contestmultis);
+    $contests = Contest::OrderBy('created_at', 'DESC')->with('vendor')->paginate(20);
     return view('frontend.contest_archive', compact('contests'));
 }
     
