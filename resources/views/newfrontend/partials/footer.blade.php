@@ -82,7 +82,7 @@
  <div class="bottom">
      <div class="container">
          <div class="bottom-inner">
-             Copyright © 2022 QuickVote | by <a href="http://toasttech.co/" target="_blank">Toast Technologies
+             Copyright © 2022 QuickVote | by <a href="http://toastnigeria.com/" target="_blank">Toast Technologies
                  Limited</a>
          </div>
      </div>
