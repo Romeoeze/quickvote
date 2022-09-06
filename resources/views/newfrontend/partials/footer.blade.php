@@ -30,12 +30,23 @@
                  <div class="widget widget-menu menu-marketplace">
                      <h5 class="title-widget">Quick Links</h5>
                      <ul>
-                         <li><a href="/">Homepage </a></li>
-                         <li><a href="{{ route('about.show') }}">About QuickVote </a></li>
-                         <li><a href="{{ route('admin.profile') }}">My Dashboard</a></li>
-                         <li><a href="/">Privacy Policy</a></li>
-                         <li><a href="/">Terms & Conditions</a></li>
-                         <li><a href="{{ route('contact.show') }}">Contact Us</a></li>
+                         <li><a href="/">Homepage <i
+                                     style="padding:3px; color:rgb(255, 123, 0);"class="fa fa-caret-right"
+                                     aria-hidden="true"></i> </a></li>
+                         <li><a href="{{ route('about.show') }}">About Us <i
+                                     style="padding:3px; color:gold;"class="fa fa-caret-right"
+                                     aria-hidden="true"></i></a></li>
+                         <li><a href="{{ route('admin.profile') }}">My Dashboard <i
+                                     style="padding:3px;color:gold;"class="fa fa-caret-right"
+                                     aria-hidden="true"></i></a></li>
+                         <li><a href="/">Privacy Policy <i
+                                     style="padding:3px;color:gold;"class="fa fa-caret-right"
+                                     aria-hidden="true"></i></a></li>
+                         <li><a href="/">Legal <i style="padding:3px; color:gold;"class="fa fa-caret-right"
+                                     aria-hidden="true"></i></a></li>
+                         <li><a href="{{ route('contact.show') }}">Contact Us <i
+                                     style="padding:3px; color:gold;"class="fa fa-caret-right"
+                                     aria-hidden="true"></i></a></li>
 
                      </ul>
 
@@ -51,8 +62,13 @@
                  <div class="widget widget-menu menu-supports">
                      <h5 class="title-widget">Contests</h5>
                      <ul>
-                         <li><a href="{{ route('contest.create') }}">Create Contest</a></li>
-                         <li><a href="{{ route('contest.archive') }}">Live Contests</a></li>
+                         <li><a href="{{ route('contest.create') }}">Create Contest <i
+                                     style="padding:3px; color:gold;"class="fa fa-caret-right"
+                                     aria-hidden="true"></i></a></li>
+                         <li><a href="{{ route('contest.archive') }}">Live Contests <i
+                                     style="padding:3px; color:gold;"class="fa fa-caret-right"
+                                     aria-hidden="true"></i></a>
+                         </li>
 
                      </ul>
                  </div>
@@ -60,14 +76,14 @@
              <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                  <div class="widget widget-post">
                      <h5 class="title-widget">Get in Touch</h5>
-                     <p style="font-size: 16px; margin-bottom:5px;"><i style="color:rgb(232, 166, 23);"
+                     <p style="font-size: 15px;font-weight:bold;margin-bottom:8px;"><i style="color:rgb(232, 166, 23);"
                              class="fa fa-phone-square"></i> 080
                          536 82130
                      </p>
-                     <p style="font-size: 16px; margin-bottom:5px;"><i style="color:rgb(232, 166, 23);"
+                     <p style="font-size: 15px;font-weight:bold;margin-bottom:8px;"><i style="color:rgb(232, 166, 23);"
                              class="fa fa-envelope"></i>
                          info@quickvote.ng</p>
-                     <p style="font-size: 16px; margin-bottom:5px;"><i style="color:rgb(232, 166, 23);"
+                     <p style="font-size: 15px;font-weight:bold;margin-bottom:8px;"><i style="color:rgb(232, 166, 23);"
                              class="fa fa-map-marker"></i> No 16
                          Banjul Street, Wuse II - Abuja,
                          Nigeria</p>
