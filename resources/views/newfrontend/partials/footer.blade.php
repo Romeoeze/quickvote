@@ -99,7 +99,7 @@
      <div class="container">
          <div class="bottom-inner" style="margin-bottom: 40px; margin-top:20px;">
              Copyright © 2022 QuickVote | by <a href="http://toastnigeria.com/" target="_blank">Toast Technologies
-                 Limited</a>
+             </a>
          </div>
      </div>
  </div>
