@@ -256,6 +256,78 @@ public function contestSearch(Request $request)
 }
 
 
+public function adminContestShowSinglePiaid($slug)
+{
+   
+    
+        $contest = Contest::where('slug', $slug)
+        ->with('vendor')
+        ->with('contestants')
+        ->first();
+        
+        return view ('contest.show_vendor_contest', compact ('contest'));
+    
+
+  
+   
+   
+}
+
+
+public function adminContestShowSinglePiaidStop($slug)
+{
+    $contest = Contest::where('slug',$slug)->first();
+                
+    $contest->status = 3;
+    $contest->save();
+   
+
+    $notification = array(
+        'message' => 'Contest Disabled Successfully', 
+        'alert-type' => 'success'
+    );
+    return redirect()->back()->with( $notification);
+}
+
+public function adminContestShowSinglePiaidApprove($slug)
+{
+    $contest = Contest::where('slug',$slug)->first();
+                
+    $contest->status = 1;
+    $contest->save();
+   
+
+    $notification = array(
+        'message' => 'Contest Approved Successfully', 
+        'alert-type' => 'success'
+    );
+    return redirect()->back()->with( $notification);
+}
+
+public function adminContestShowSinglePiaidReActivate($slug)
+{
+    $contest = Contest::where('slug',$slug)->first();
+                
+    $contest->status = 1;
+    $contest->save();
+   
+
+    $notification = array(
+        'message' => 'Contest Re-Activated Successfully', 
+        'alert-type' => 'success'
+    );
+    return redirect()->back()->with( $notification);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -264,3 +336,6 @@ public function contestSearch(Request $request)
 
 
 }
+
+
+

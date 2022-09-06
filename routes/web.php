@@ -509,7 +509,10 @@ Route::controller(AdminController::class)->prefix('/admin')->middleware(['auth',
 
     Route::post('/contest/process', ' processContest')->name('admin.contest.process');
     Route::post('/contest/search', 'contestSearch')->name('admin.contest.search');
-
+    Route::get('/contest/{slug}', 'adminContestShowSinglePiaid')->name('admin.contest.show.singlepaid');
+    Route::get('/contest/approve/{slug}', 'adminContestShowSinglePiaidApprove')->name('admin.contest.show.singlepaid.approve');
+    Route::get('/contest/re-activate/{slug}', 'adminContestShowSinglePiaidReActivate')->name('admin.contest.show.singlepaid.reactivate');
+    Route::get('/contest/stop/{slug}', 'adminContestShowSinglePiaidStop')->name('admin.contest.show.singlepaid.stop');
 
 
 });

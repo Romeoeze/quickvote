@@ -15,10 +15,11 @@
 
             <div class="col-4">
                 <div class="box mb-8 mr-6 col-md-8">
-
-                    <a href="{{ route('contest.all') }}" style="float: right;" class="btn btn-rounded btn-success"><i
-                            class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back
-                    </a>
+                    @if (Auth::user()->Role == 'Vendor')
+                        <a href="{{ route('contest.all') }}" style="float: right;" class="btn btn-rounded btn-success"><i
+                                class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back
+                        </a>
+                    @endif
 
                 </div><br><br>
             </div>

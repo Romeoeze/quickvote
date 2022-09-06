@@ -17,7 +17,7 @@ class VendorMiddleware
      */
     public function handle(Request $request, Closure $next)
     
-    { if (Auth::check() && Auth::user()-> Role != 'Vendor'){
+    { if (Auth::check() && Auth::user()-> Role == 'Voter'){
         return redirect()->route('vendor.signup');
     } 
        

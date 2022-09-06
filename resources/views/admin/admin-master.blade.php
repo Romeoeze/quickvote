@@ -38,15 +38,24 @@
 
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     @yield('css')
-
+    {{-- .footer-links > li > a > i{
+       
+      } --}}
     <style scoped>
+        @media screen and (max-width: 1600px) {
+            .iconcss i {
+                vertical-align: top !important;
+            }
+        }
+
+
         @media screen and (max-width: 700px) {
             .stats-value .badge {
                 font-size: 13px !important;
             }
 
-            .start span {
-                font-size: 15px !important;
+            .sc-button span {
+                font-size: 13px !important;
             }
         }
     </style>
@@ -156,7 +165,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <script src="{{ asset('backend/assets/js/code.js') }}"></script>
+    <script src="{{ asset('backend/assets/js/code1.js') }}"></script>
     <script src="{{ asset('backend/assets/js/parsley.min.js') }}"></script>
 
     <!--tinymce js-->

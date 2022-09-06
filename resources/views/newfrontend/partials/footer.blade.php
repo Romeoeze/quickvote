@@ -77,14 +77,14 @@
                  <div class="widget widget-post">
                      <h5 class="title-widget">Get in Touch</h5>
                      <p style="font-size: 15px;font-weight:bold;margin-bottom:8px;"><i style="color:rgb(232, 166, 23);"
-                             class="fa fa-phone-square"></i> 080
+                             class="fa fa-phone-square"></i> &nbsp;&nbsp;080
                          536 82130
                      </p>
                      <p style="font-size: 15px;font-weight:bold;margin-bottom:8px;"><i style="color:rgb(232, 166, 23);"
                              class="fa fa-envelope"></i>
-                         info@quickvote.ng</p>
+                         &nbsp;&nbsp;info@quickvote.ng</p>
                      <p style="font-size: 15px;font-weight:bold;margin-bottom:8px;"><i style="color:rgb(232, 166, 23);"
-                             class="fa fa-map-marker"></i> No 16
+                             class="fa fa-map-marker"></i> &nbsp;&nbsp;No 16
                          Banjul Street, Wuse II - Abuja,
                          Nigeria</p>
 
