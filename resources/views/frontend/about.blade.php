@@ -104,25 +104,7 @@
 
 
     </div>
-    <div class="container">
 
-
-        <section class="text-center dark-grey-text">
-
-
-
-
-            <h3 class="font-weight-bold pb-2 ">Simple, Fair & Affordable prices for all. </h3>
-            <p class="text-muted w-responsive mx-auto mb-5" style="font-size: 24px; line-height:30px;">Explore our Paid or
-                Freemium plans for instant voting and other cool features. </p>
-
-
-        </section>
-
-
-
-
-    </div>
     <div class="containerr">
 
         <div class="column">
