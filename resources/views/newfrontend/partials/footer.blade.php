@@ -97,7 +97,7 @@
  <!-- Bottom -->
  <div class="bottom">
      <div class="container">
-         <div class="bottom-inner" style="margin-bottom: 40px; margin-top:20px;">
+         <div class="bottom-inner" style="margin-bottom: 60px; margin-top:20px;">
              Copyright © 2022 QuickVote | by <a href="http://toastnigeria.com/" target="_blank">Toast Technologies
              </a>
          </div>
