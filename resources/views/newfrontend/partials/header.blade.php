@@ -84,8 +84,7 @@
                                 <div id="site-logo" class="clearfix">
                                     <div id="site-logo-inner" class="customLogo">
                                         <a href="{{ route('homepage.show') }}" class="main-logo">
-                                            <img src="{{ asset('uploads/images/logo.png') }}" alt="Quickvote"
-                                                data-retina="images/logo.png">
+                                            <img src="{{ asset('uploads/images/logo.png') }}" alt="Quickvote">
 
                                         </a>
 
