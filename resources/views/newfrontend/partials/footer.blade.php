@@ -59,33 +59,19 @@
              </div>
              <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                  <div class="widget widget-post">
-                     <h5 class="title-widget">News & Post</h5>
-                     <ul class="post-new">
-                         <li>
-                             <div class="post-img">
-                                 <img src="{{ asset('quickvote/assets/images/post/post-recent-new-4.jpg') }}"
-                                     alt="Post New">
-                             </div>
-                             <div class="post-content">
-                                 <h6 class="title"><a href="blog-details.html">Roll Out New Features Without
-                                         Hurting Loyal Users</a></h6>
-                                 <a href="blog-details.html" class="post-date"><i class="far fa-calendar-week"></i>
-                                     25 JAN 2022</a>
-                             </div>
-                         </li>
-                         <li>
-                             <div class="post-img">
-                                 <img src="{{ asset('quickvote/assets/images/post/post-recent-new-5.jpg') }}"
-                                     alt="Post New">
-                             </div>
-                             <div class="post-content">
-                                 <h6 class="title"><a href="blog-details.html">An Overview The Most Comon UX
-                                         Design Deliverables</a></h6>
-                                 <a href="blog-details.html" class="post-date"><i class="far fa-calendar-week"></i>
-                                     25 JAN 2022</a>
-                             </div>
-                         </li>
-                     </ul>
+                     <h5 class="title-widget">Get in Touch</h5>
+                     <p style="font-size: 16px; margin-bottom:5px;"><i style="color:rgb(232, 166, 23);"
+                             class="fa fa-phone-square"></i> 080
+                         536 82130
+                     </p>
+                     <p style="font-size: 16px; margin-bottom:5px;"><i style="color:rgb(232, 166, 23);"
+                             class="fa fa-envelope"></i>
+                         info@quickvote.ng</p>
+                     <p style="font-size: 16px; margin-bottom:5px;"><i style="color:rgb(232, 166, 23);"
+                             class="fa fa-map-marker"></i> No 16
+                         Banjul Street, Wuse II - Abuja,
+                         Nigeria</p>
+
                  </div>
              </div>
          </div>
@@ -109,49 +95,7 @@
 
  <a id="scroll-top"></a>
 
- <!-- Modal Popup Bid -->
- <div class="modal fade popup" id="popup_bid_success" tabindex="-1" role="dialog" aria-hidden="true">
-     <div class="modal-dialog modal-dialog-centered" role="document">
-         <div class="modal-content">
-             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                 <span aria-hidden="true">&times;</span>
-             </button>
-             <div class="modal-body space-y-20 pd-40">
-                 <h3 class="text-center">Your Bidding
-                     Successfuly Added</h3>
-                 <p class="text-center">your bid <span class="price color-popup">(5.23ETH) </span> has been listing
-                     to our database</p>
-                 <a href="#" class="btn btn-primary"> Watch the listings</a>
-             </div>
-         </div>
-     </div>
- </div>
- <div class="modal fade popup" id="popup_bid" tabindex="-1" role="dialog" aria-hidden="true">
-     <div class="modal-dialog modal-dialog-centered" role="document">
-         <div class="modal-content">
-             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                 <span aria-hidden="true">&times;</span>
-             </button>
-             <div class="modal-body space-y-20 pd-40">
-                 <h3>Place a Bid</h3>
-                 <p class="text-center">You must bid at least <span class="price color-popup">5.23 ETH</span>
-                 </p>
-                 <input type="text" class="form-control" placeholder="00.00 ETH">
-                 <p>Enter quantity. <span class="color-popup">1 available</span>
-                 </p>
-                 <input type="text" class="form-control quantity" value="1">
-                 <div class="hr"></div>
 
-                 <div class="d-flex justify-content-between">
-                     <p> Current Bid</p>
-                     <p class="text-right price color-popup"> 5.23 ETH </p>
-                 </div>
-                 <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#popup_bid_success"
-                     data-dismiss="modal" aria-label="Close"> Place a bid</a>
-             </div>
-         </div>
-     </div>
- </div>
 
  <!-- Javascript -->
  <script src="{{ asset('quickvote/assets/js/jquery.min.js') }}"></script>
