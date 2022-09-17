@@ -5,6 +5,7 @@ use App\Http\Controllers\LogoController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ResultController;
 use App\Http\Controllers\VendorController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ContestController;
 use App\Http\Controllers\Frontend\Homepage;
 use App\Http\Controllers\PaymentController;
@@ -48,7 +49,7 @@ Route::get('/contests/all',[Homepage::class, 'contestarchive'] )->name('contest.
 Route::get('/contests/{slug}',[Homepage::class, 'ContestView'] )->name('contest.user.view');
 Route::get('/contestant/{slug}',[Homepage::class, 'ContestantUserVote'] )->name('contestant.user.vote');
 Route::post('/contestant/search/',[Homepage::class, 'ContestantUserSearch'] )->name('contestant.user.search');
-
+Route::post('/contact/send/',[ContactController::class, 'store'] )->name('contact.store');
 
 //////multi contest routes
 Route::get('/multicontests/{slug}',[Homepage::class, 'MultiContestView'] )->name('multicontest.user.view');
@@ -513,6 +514,18 @@ Route::controller(AdminController::class)->prefix('/admin')->middleware(['auth',
     Route::get('/contest/approve/{slug}', 'adminContestShowSinglePiaidApprove')->name('admin.contest.show.singlepaid.approve');
     Route::get('/contest/re-activate/{slug}', 'adminContestShowSinglePiaidReActivate')->name('admin.contest.show.singlepaid.reactivate');
     Route::get('/contest/stop/{slug}', 'adminContestShowSinglePiaidStop')->name('admin.contest.show.singlepaid.stop');
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 });

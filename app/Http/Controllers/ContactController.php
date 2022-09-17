@@ -35,7 +35,40 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+
+
+        $request->validate([
+
+            'name' => 'required',
+            'email' => 'required|email',
+            'subject' => 'required',
+            'message' => 'required',
+           
+        
+    
+    
+    
+           ]);
+
+      
+         
+         $contact = new Contact();
+         $contact->name = $request->name;
+         $contact->subject = $request->subject;
+         $contact->sender_email = $request->email;
+         $contact->sender_phonenumber = $request->phonenumber;
+         $contact->message = $request->message;
+        $contact->save();
+
+        $notification = array(
+            'message' => 'Contact Message Sent Successfully', 
+            'alert-type' => 'success'
+        );
+        return redirect()->route('homepage.show')->with( $notification);
+
+ 
     }
 
     /**

@@ -85,18 +85,29 @@
                                 <h3>Send Us Message</h3>
                                 <p class="desc">Most popular voting platform in Nigeria </p>
                             </div>
-                            <form id="create-item-1" action="" method="post" accept-charset="utf-8"
-                                novalidate="novalidate">
+
+                            @foreach ($errors->all() as $error)
+                                {{ $error }}<br />
+                            @endforeach
+                            <form id="create-item-1" method="post" data-parsley-validate method="post"
+                                action="{{ route('contact.store') }}">
+                                @csrf
                                 <input type="text" id="name" class="tb-my-input" name="name" tabindex="1"
                                     placeholder="Your Full Name" value="" aria-required="true" required="">
-                                <input type="email" id="email" class="tb-my-input" name="email" tabindex="2"
+                                <input type="email" name="email" class="tb-my-input" name="email" tabindex="2"
                                     placeholder="Email Address" value="" aria-required="true" required="">
-                                <select class="valid">
-                                    <option value="1">General Enquiry</option>
-                                    <option value="2">Technical Issues</option>
-                                    <option value="3">Partnerships</option>
+                                <input type="text" id="phone" class="tb-my-input" name="phonenumber" tabindex="1"
+                                    placeholder="Your Phone Number" value="" aria-required="true" required="">
+                                <select class="valid" name="subject" required>
+
+                                    <option disabled selected value> -- Select Subject -- </option>
+                                    <option value="General Enquiry">General Enquiry</option>
+                                    <option value="Technical Issues">Technical Issues</option>
+                                    <option value="Partnerships">Partnerships</option>
                                 </select>
-                                <textarea id="comment-message" name="message" tabindex="4" placeholder="Write Message" aria-required="true"></textarea>
+                                <textarea id="comment-message" name="message" tabindex="4" placeholder="Write Message" aria-required="true" required></textarea>
+
+
                                 <button name="submit" type="submit" id="comment-reply"
                                     class="sc-button style letter style-2"><span>Send Message</span> </button>
                             </form>

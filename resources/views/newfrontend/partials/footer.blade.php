@@ -119,7 +119,7 @@
  <script src="{{ asset('quickvote/assets/js/bootstrap.min.js') }}"></script>
  <script src="{{ asset('quickvote/assets/js/swiper-bundle.min.js') }}"></script>
  <script src="{{ asset('quickvote/assets/js/swiper.js') }}"></script>
-
+ <script src="{{ asset('backend/assets/js/parsley.min.js') }}"></script>
  <script src="{{ asset('quickvote/assets/js/plugin.js') }}"></script>
  <script src="{{ asset('quickvote/assets/js/count-down.js') }}"></script>
  <script src="{{ asset('quickvote/assets/js/shortcodes.js') }}"></script>
