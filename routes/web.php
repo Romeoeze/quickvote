@@ -50,6 +50,7 @@ Route::get('/contests/{slug}',[Homepage::class, 'ContestView'] )->name('contest.
 Route::get('/contestant/{slug}',[Homepage::class, 'ContestantUserVote'] )->name('contestant.user.vote');
 Route::post('/contestant/search/',[Homepage::class, 'ContestantUserSearch'] )->name('contestant.user.search');
 Route::post('/contact/send/',[ContactController::class, 'store'] )->name('contact.store');
+Route::post('/newsletter/subscribe/',[ContactController::class, 'newsletter'] )->name('newsletter.subscribe');
 
 //////multi contest routes
 Route::get('/multicontests/{slug}',[Homepage::class, 'MultiContestView'] )->name('multicontest.user.view');

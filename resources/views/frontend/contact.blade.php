@@ -89,7 +89,7 @@
                             @foreach ($errors->all() as $error)
                                 {{ $error }}<br />
                             @endforeach
-                            <form id="create-item-1" method="post" data-parsley-validate method="post"
+                            <form id="create-item-1" method="post" data-parsley-validate 
                                 action="{{ route('contact.store') }}">
                                 @csrf
                                 <input type="text" id="name" class="tb-my-input" name="name" tabindex="1"

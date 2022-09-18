@@ -277,8 +277,8 @@
                 <div class="col-12 col-lg-6 col-xl-5">
                     <div>
                         <!-- <span class="badge badge-primary-soft p-2">
-                                                                                                                                                                                                                                  <i class="la la-exclamation ic-3x rotation"></i>
-                                                                                                                                                                                                                              </span> -->
+                                                                                                                                                                                                                                                  <i class="la la-exclamation ic-3x rotation"></i>
+                                                                                                                                                                                                                                              </span> -->
                         <h6 style="color:rgb(214, 203, 203)">Trusted By</h6><br>
                         <div class="slider_r">
                             <div class="slide-track">
@@ -386,8 +386,13 @@
                     <h3 class="heading">Quickvote Newsletters</h3>
                     <p class="sub-heading">Subscribe to our newsletters and receive the latest news from QuickVote.</p>
                     <div class="form-subcribe">
-                        <form id="subscribe-form" action="#" method="GET" accept-charset="utf-8"
-                            class="form-submit">
+
+                        @foreach ($errors->all() as $error)
+                            {{ $error }}<br />
+                        @endforeach
+                        <form id="subscribe-form" action="{{ route('newsletter.subscribe') }}" method="post"
+                            data-parsley-validate class="form-submit">
+                            @csrf
                             <input name="email" value="" class="email" type="email"
                                 placeholder="Enter Email Address" required="">
                             <button name="submit" type="submit"

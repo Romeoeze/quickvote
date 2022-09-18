@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use App\Models\Message;
+use App\Models\Newsletter;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -71,6 +72,47 @@ class ContactController extends Controller
 
  
     }
+
+
+
+    public function  newsletter(Request $request)
+    {
+
+
+
+
+        $request->validate([
+
+      
+            'email' => 'required|email|unique:newsletters,subscriber_email',
+          
+           
+        
+    
+    
+    
+           ]);
+
+      
+         
+         $contact = new Newsletter();
+    
+         $contact->subscriber_email = $request->email;
+        
+        $contact->save();
+
+        $notification = array(
+            'message' => 'Newsletter Subscription Request Sent Successfully', 
+            'alert-type' => 'success'
+        );
+        return redirect()->route('homepage.show')->with( $notification);
+
+ 
+    }
+
+
+
+   
 
     /**
      * Display the specified resource.
