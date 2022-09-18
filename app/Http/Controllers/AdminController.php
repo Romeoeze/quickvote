@@ -393,6 +393,178 @@ public function adminContestShowMultiPiaidReActivate($slug)
 
 
 
+public function adminContestShowSingleFree($slug)
+{
+   
+    
+        $contest = CorporateSingleContest::where('slug', $slug)
+        ->with('vendor')
+        ->with('contestants')
+        ->first();
+        
+        return view ('contest.cs.cs_show_vendor_contest', compact ('contest'));
+    
+
+  
+   
+   
+}
+
+
+
+
+
+
+public function adminContestShowSingleFreeApprove($slug)
+{
+    $contest = CorporateSingleContest::where('slug',$slug)->first();
+                
+    $contest->status = 1;
+    $contest->save();
+   
+
+    $notification = array(
+        'message' => 'Contest Approved Successfully', 
+        'alert-type' => 'success'
+    );
+    return redirect()->back()->with( $notification);
+}
+
+
+
+
+
+public function adminContestShowSingleFreeStop($slug)
+{
+    $contest = CorporateSingleContest::where('slug',$slug)->first();
+                
+    $contest->status = 3;
+    $contest->save();
+   
+
+    $notification = array(
+        'message' => 'Contest Disabled Successfully', 
+        'alert-type' => 'success'
+    );
+    return redirect()->back()->with( $notification);
+}
+
+
+
+
+public function adminContestShowSingleFreeReActivate($slug)
+{
+    $contest = CorporateSingleContest::where('slug',$slug)->first();
+                
+    $contest->status = 1;
+    $contest->save();
+   
+
+    $notification = array(
+        'message' => 'Contest Re-Activated Successfully', 
+        'alert-type' => 'success'
+    );
+    return redirect()->back()->with( $notification);
+}
+
+
+
+
+
+
+
+
+
+public function adminContestShowMultiFree($slug)
+{
+   
+    
+        $contest = CorporateMultiContest::where('slug', $slug)
+        ->with('vendor')
+        ->with('category')
+        ->first();
+        
+        return view ('contest.cm.show_vendor_multicontest', compact ('contest'));
+    
+
+  
+   
+   
+}
+
+
+
+
+public function adminContestShowMultiFreeApprove($slug)
+{
+    $contest = CorporateMultiContest::where('slug',$slug)->first();
+                
+    $contest->status = 1;
+    $contest->save();
+   
+
+    $notification = array(
+        'message' => 'Contest Approved Successfully', 
+        'alert-type' => 'success'
+    );
+    return redirect()->back()->with( $notification);
+}
+
+
+
+
+
+public function adminContestShowMultiFreeStop($slug)
+{
+    $contest = CorporateMultiContest::where('slug',$slug)->first();
+                
+    $contest->status = 3;
+    $contest->save();
+   
+
+    $notification = array(
+        'message' => 'Contest Disabled Successfully', 
+        'alert-type' => 'success'
+    );
+    return redirect()->back()->with( $notification);
+}
+
+
+
+
+
+
+public function adminContestShowMultiFreeReActivate($slug)
+{
+    $contest = CorporateMultiContest::where('slug',$slug)->first();
+                
+    $contest->status = 1;
+    $contest->save();
+   
+
+    $notification = array(
+        'message' => 'Contest Re-Activated Successfully', 
+        'alert-type' => 'success'
+    );
+    return redirect()->back()->with( $notification);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

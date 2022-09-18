@@ -81,10 +81,10 @@
                                                     @endswitch
                                                 </td>
                                                 <td>
-                                                    <a href="{{ route('contest.show', $contest->slug) }}"
+                                                    <a href="{{ route('admin.contest.show.multifree', $contest->slug) }}"
                                                         class="btn btn-warning">View</a>
-                                                    <a href="{{ route('contest.edit', $contest->id) }}"
-                                                        class="btn btn-info">Edit</a>
+                                                    {{-- <a href="{{ route('contest.edit', $contest->id) }}"
+                                                        class="btn btn-info">Edit</a> --}}
                                                     {{-- <a href="{{ route('contestant.add') }}" class="btn btn-success">Add
                                                         Contestants <i class="ri-arrow-right-line align-middle ms-2"></i>
                                                     </a> --}}

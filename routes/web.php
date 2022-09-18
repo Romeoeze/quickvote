@@ -525,6 +525,27 @@ Route::controller(AdminController::class)->prefix('/admin')->middleware(['auth',
     Route::get('/contest/multi/re-activate/{slug}', 'adminContestShowMultiPiaidReActivate')->name('admin.contest.show.multipaid.reactivate');
 
 
+  //admin manage single free contests
+  Route::get('/contest/single/free/{slug}', 'adminContestShowSingleFree')->name('admin.contest.show.singlefree');
+  Route::get('/contest/single/free/approve/{slug}', 'adminContestShowSingleFreeApprove')->name('admin.contest.show.singlefree.approve');
+  Route::get('/contest/single/free/stop/{slug}', 'adminContestShowSingleFreeStop')->name('admin.contest.show.singlefree.stop');
+  Route::get('/contest/single/free/re-activate/{slug}', 'adminContestShowSingleFreeReActivate')->name('admin.contest.show.singlefree.reactivate');
+
+
+  //admin manage multi free contests
+  Route::get('/contest/multi/free/{slug}', 'adminContestShowMultiFree')->name('admin.contest.show.multifree');
+  Route::get('/contest/multi/free/approve/{slug}', 'adminContestShowMultiFreeApprove')->name('admin.contest.show.multifree.approve');
+  Route::get('/contest/multi/free/stop/{slug}', 'adminContestShowMultiFreeStop')->name('admin.contest.show.multifree.stop');
+  Route::get('/contest/multi/free/re-activate/{slug}', 'adminContestShowMultiFreeReActivate')->name('admin.contest.show.multifree.reactivate');
+
+
+
+
+
+
+
+
+
 
 
 

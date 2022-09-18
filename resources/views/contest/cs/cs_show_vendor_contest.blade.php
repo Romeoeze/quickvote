@@ -116,14 +116,30 @@
 
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <a class="btn btn-info "
-                                        href="{{ route('corporatesinglecontest.edit', $contest->id) }}">Edit
-                                        contest Account <i class="ri-edit-box-fill"></i> </a>
+                                    @if (Auth::user()->Role == 'Vendor')
+                                        <a class="btn btn-info "
+                                            href="{{ route('corporatesinglecontest.edit', $contest->id) }}">Edit
+                                            contest Account <i class="ri-edit-box-fill"></i> </a>
 
-                                    <a class="btn btn-warning " href="{{ route('corporatesinglevoter.add') }}">
-                                        Pre-Register Voters
-                                        <i class="ri-add-line"></i></a>
-
+                                        <a class="btn btn-warning " href="{{ route('corporatesinglevoter.add') }}">
+                                            Pre-Register Voters
+                                            <i class="ri-add-line"></i></a>
+                                    @endif
+                                    @if (Auth::user()->Role == 'Admin')
+                                        @if ($contest->status == '1')
+                                            <a id="stop" class="btn btn-danger "
+                                                href="{{ route('admin.contest.show.singlefree.stop', $contest->slug) }}">
+                                                Stop Contest <i class="ri-stop-circle-line iconcss"></i> </a>
+                                        @elseif($contest->status == '2')
+                                            <a id="approve" class="btn btn-success"
+                                                href="{{ route('admin.contest.show.singlefree.approve', $contest->slug) }}">Approve
+                                                Contest <i class="ri-edit-box-fill iconcss"></i> </a>
+                                        @else
+                                            <a id="reactivate" class="btn btn-success"
+                                                href="{{ route('admin.contest.show.singlefree.reactivate', $contest->slug) }}">Reactivate
+                                                Contest <i class="ri-edit-box-fill iconcss"></i> </a>
+                                        @endif
+                                    @endif
 
                                 </div>
                             </div>
@@ -149,15 +165,17 @@
             <div class="col-4">
             </div>
             <div class="col-4"></div>
-            <div class="col-4">
-                <div class="box mb-8 mr-6 col-md-8">
+            @if (Auth::user()->Role == 'Vendor')
+                <div class="col-4">
+                    <div class="box mb-8 mr-6 col-md-8">
 
-                    <a href="{{ route('corporatesinglecontestant.add') }}" style="float: right;"
-                        class="btn btn-rounded btn-success"> Add
-                        Contestants <i class="ri-add-circle-fill"></i></a>
+                        <a href="{{ route('corporatesinglecontestant.add') }}" style="float: right;"
+                            class="btn btn-rounded btn-success"> Add
+                            Contestants <i class="ri-add-circle-fill"></i></a>
 
+                    </div>
                 </div>
-            </div>
+            @endif
         </div>
         <h1>CONTESTANTS</h1>
 
@@ -167,11 +185,11 @@
 
                 @foreach ($contestants as $con)
                     <div class="col-md-4">
-                        <a href=""><img class="img-thumbnail rounded-circle avatar-xlsrc=" src="{{ asset($con->image) }}"
-                                alt="Image" width="340px"></a><br>
+                        <a href=""><img class="img-thumbnail rounded-circle avatar-xlsrc="
+                                src="{{ asset($con->image) }}" alt="Image" width="340px"></a><br>
                         <h3 class="heading mt-4 mb-4">{{ $con->name }}</h3>
-                        <h3><a href="{{ route('corporatesinglecontestant.vendor.show', $con->id) }}"><button
-                                    type="button" class="btn btn-primary waves-effect waves-light" style="font-size:12px;">
+                        <h3><a href="{{ route('corporatesinglecontestant.vendor.show', $con->id) }}"><button type="button"
+                                    class="btn btn-primary waves-effect waves-light" style="font-size:12px;">
                                     View Contestant <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
                                 </button></a></h3>
                         <br><br><br><br>
