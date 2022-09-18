@@ -112,13 +112,14 @@
 
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <a class="btn btn-info "
-                                        href="{{ route('corporatemulticontest.edit', $contest->id) }}">Edit
-                                        contest Account <i class="ri-edit-box-fill"></i> </a>
-                                    <a class="btn btn-warning "
-                                        href="{{ route('corporatemulticontestcategory.create') }}"> Add
-                                        Categories <i class="ri-file-add-fill"></i> </a>
-
+                                    @if (Auth::user()->Role == 'Vendor')
+                                        <a class="btn btn-info "
+                                            href="{{ route('corporatemulticontest.edit', $contest->id) }}">Edit
+                                            contest Account <i class="ri-edit-box-fill"></i> </a>
+                                        <a class="btn btn-warning "
+                                            href="{{ route('corporatemulticontestcategory.create') }}"> Add
+                                            Categories <i class="ri-file-add-fill"></i> </a>
+                                    @endif
 
                                 </div>
                             </div>

@@ -38,7 +38,7 @@ class AdminController extends Controller
 
 
 public function UserView(){
-    $data['users'] = User::latest()->paginate(4);
+    $data['users'] = User::latest()->paginate(25);
     return view ('admin.users', $data);
 }
 
@@ -320,7 +320,22 @@ public function adminContestShowSinglePiaidReActivate($slug)
 }
 
 
+public function adminContestShowMultiPiaid($slug)
+{
+   
+    
+        $contest = MultiContest::where('slug', $slug)
+        ->with('vendor')
+        ->with('category')
+        ->first();
+        
+        return view ('contest.withcategory.show_vendor_multicontest', compact ('contest'));
+    
 
+  
+   
+   
+}
 
 
 

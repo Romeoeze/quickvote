@@ -108,12 +108,28 @@
 
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <a class="btn btn-info " href="{{ route('multicontest.edit', $contest->id) }}">Edit
-                                        contest Account <i class="ri-edit-box-fill"></i> </a>
-                                    <a class="btn btn-warning " href="{{ route('multicontestcategory.create') }}"> Add
-                                        Categories <i class="ri-file-add-fill"></i> </a>
+                                    @if (Auth::user()->Role == 'Vendor')
+                                        <a class="btn btn-info " href="{{ route('multicontest.edit', $contest->id) }}">Edit
+                                            contest Account <i class="ri-edit-box-fill"></i> </a>
+                                        <a class="btn btn-warning " href="{{ route('multicontestcategory.create') }}"> Add
+                                            Categories <i class="ri-file-add-fill"></i> </a>
+                                    @endif
 
-
+                                    @if (Auth::user()->Role == 'Admin')
+                                        @if ($contest->status == '1')
+                                            <a id="stop" class="btn btn-danger "
+                                                href="{{ route('admin.contest.show.singlepaid.stop', $contest->slug) }}">
+                                                Stop Contest <i class="ri-stop-circle-line iconcss"></i> </a>
+                                        @elseif($contest->status == '2')
+                                            <a id="approve" class="btn btn-success"
+                                                href="{{ route('admin.contest.show.singlepaid.approve', $contest->slug) }}">Approve
+                                                Contest <i class="ri-edit-box-fill iconcss"></i> </a>
+                                        @else
+                                            <a id="reactivate" class="btn btn-success"
+                                                href="{{ route('admin.contest.show.singlepaid.reactivate', $contest->slug) }}">Reactivate
+                                                Contest <i class="ri-edit-box-fill iconcss"></i> </a>
+                                        @endif
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -141,8 +157,8 @@
             <div class="col-4">
                 <div class="box mb-8 mr-6 col-md-8">
 
-                    <a href="{{ route('multicontestant.add') }}" style="float: right;"
-                        class="btn btn-rounded btn-success"> Add
+                    <a href="{{ route('multicontestant.add') }}" style="float: right;" class="btn btn-rounded btn-success">
+                        Add
                         Contestants <i class="ri-add-circle-fill"></i></a>
 
                 </div>

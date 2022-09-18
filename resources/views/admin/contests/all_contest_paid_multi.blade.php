@@ -43,7 +43,7 @@
                                             <th>Image</th>
 
                                             <th>Contest Name</th>
-                                            <th>Vote Price</th>
+
                                             <th>Vendor</th>
                                             <th>Status</th>
                                             <th width="25%">Action</th>
@@ -57,10 +57,10 @@
                                                 <td><img src="{{ asset($contest->contest_image) }}" alt=""
                                                         width="100px">
                                                 </td>
-                                                <td><a href="{{ route('contest.show', $contest->slug) }}"
+                                                <td><a href="{{ route('admin.contest.show.multipaid', $contest->slug) }}"
                                                         style="color:rgb(15, 14, 14); font-weight:900 !important;">
                                                         {{ $contest->contest_name }}</a></td>
-                                                <td>{{ $contest->vote_price }}</td>
+
                                                 <td>{{ $contest->vendor->company_name }}</td>
 
                                                 <td>
@@ -81,10 +81,10 @@
                                                     @endswitch
                                                 </td>
                                                 <td>
-                                                    <a href="{{ route('contest.show', $contest->slug) }}"
+                                                    <a href="{{ route('admin.contest.show.multipaid', $contest->slug) }}"
                                                         class="btn btn-warning">View</a>
-                                                    <a href="{{ route('contest.edit', $contest->id) }}"
-                                                        class="btn btn-info">Edit</a>
+                                                    {{-- <a href="{{ route('contest.edit', $contest->id) }}"
+                                                        class="btn btn-info">Edit</a> --}}
                                                     {{-- <a href="{{ route('contestant.add') }}" class="btn btn-success">Add
                                                         Contestants <i class="ri-arrow-right-line align-middle ms-2"></i>
                                                     </a> --}}

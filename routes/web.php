@@ -515,6 +515,7 @@ Route::controller(AdminController::class)->prefix('/admin')->middleware(['auth',
     Route::get('/contest/approve/{slug}', 'adminContestShowSinglePiaidApprove')->name('admin.contest.show.singlepaid.approve');
     Route::get('/contest/re-activate/{slug}', 'adminContestShowSinglePiaidReActivate')->name('admin.contest.show.singlepaid.reactivate');
     Route::get('/contest/stop/{slug}', 'adminContestShowSinglePiaidStop')->name('admin.contest.show.singlepaid.stop');
+    Route::get('/contest/multi/{slug}', 'adminContestShowMultiPiaid')->name('admin.contest.show.multipaid');
 
 
 
