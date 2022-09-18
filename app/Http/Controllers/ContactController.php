@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -54,7 +55,7 @@ class ContactController extends Controller
 
       
          
-         $contact = new Contact();
+         $contact = new Message();
          $contact->name = $request->name;
          $contact->subject = $request->subject;
          $contact->sender_email = $request->email;
