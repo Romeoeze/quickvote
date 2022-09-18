@@ -110,8 +110,8 @@ public function contact(){
 
 public function searchcontest (Request $request){
 
-     $single = Contest::where('contest_name', 'LIKE', "%{$request->search}%")->get();
-     $multi = Multicontest::where('contest_name', 'LIKE', "%{$request->search}%")->get();
+     $single = Contest::where('contest_name', 'LIKE', "%{$request->search}%")->where('end_date', '>=' , Carbon::now())->where('status', '=' , 1)->get();
+     $multi = Multicontest::where('contest_name', 'LIKE', "%{$request->search}%")->where('end_date', '>=' , Carbon::now())->where('status', '=' , 1)->get();
 
 
 
