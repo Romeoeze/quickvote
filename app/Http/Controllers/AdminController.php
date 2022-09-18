@@ -339,10 +339,55 @@ public function adminContestShowMultiPiaid($slug)
 
 
 
+public function adminContestShowMultiPiaidApprove($slug)
+{
+    $contest = MultiContest::where('slug',$slug)->first();
+                
+    $contest->status = 1;
+    $contest->save();
+   
+
+    $notification = array(
+        'message' => 'Contest Approved Successfully', 
+        'alert-type' => 'success'
+    );
+    return redirect()->back()->with( $notification);
+}
 
 
 
 
+public function adminContestShowMultiPiaidStop($slug)
+{
+    $contest = MultiContest::where('slug',$slug)->first();
+                
+    $contest->status = 3;
+    $contest->save();
+   
+
+    $notification = array(
+        'message' => 'Contest Disabled Successfully', 
+        'alert-type' => 'success'
+    );
+    return redirect()->back()->with( $notification);
+}
+
+
+
+public function adminContestShowMultiPiaidReActivate($slug)
+{
+    $contest = MultiContest::where('slug',$slug)->first();
+                
+    $contest->status = 1;
+    $contest->save();
+   
+
+    $notification = array(
+        'message' => 'Contest Re-Activated Successfully', 
+        'alert-type' => 'success'
+    );
+    return redirect()->back()->with( $notification);
+}
 
 
 

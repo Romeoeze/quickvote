@@ -511,12 +511,18 @@ Route::controller(AdminController::class)->prefix('/admin')->middleware(['auth',
 
     Route::post('/contest/process', ' processContest')->name('admin.contest.process');
     Route::post('/contest/search', 'contestSearch')->name('admin.contest.search');
+
+    //admin manage single paid contests
     Route::get('/contest/{slug}', 'adminContestShowSinglePiaid')->name('admin.contest.show.singlepaid');
     Route::get('/contest/approve/{slug}', 'adminContestShowSinglePiaidApprove')->name('admin.contest.show.singlepaid.approve');
     Route::get('/contest/re-activate/{slug}', 'adminContestShowSinglePiaidReActivate')->name('admin.contest.show.singlepaid.reactivate');
     Route::get('/contest/stop/{slug}', 'adminContestShowSinglePiaidStop')->name('admin.contest.show.singlepaid.stop');
-    Route::get('/contest/multi/{slug}', 'adminContestShowMultiPiaid')->name('admin.contest.show.multipaid');
 
+      //admin manage multi paid contests
+    Route::get('/contest/multi/{slug}', 'adminContestShowMultiPiaid')->name('admin.contest.show.multipaid');
+    Route::get('/contest/multi/approve/{slug}', 'adminContestShowMultiPiaidApprove')->name('admin.contest.show.multipaid.approve');
+    Route::get('/contest/multi/stop/{slug}', 'adminContestShowMultiPiaidStop')->name('admin.contest.show.multipaid.stop');
+    Route::get('/contest/multi/re-activate/{slug}', 'adminContestShowMultiPiaidReActivate')->name('admin.contest.show.multipaid.reactivate');
 
 
 
