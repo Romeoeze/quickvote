@@ -8,7 +8,7 @@
 
 
 
-    @if (count($contests))
+    @if (count($contests) && count($contests) > 3)
         <section class="tf-trendy-collections tf-section">
             <div class="container">
                 <div class="row">
@@ -91,7 +91,108 @@
 
 
 
-    @if (count($contestmultis))
+
+
+
+    {{-- when count contest is less than 3 --}}
+
+
+    @if (count($contests) && count($contests) <= 3)
+        <section class="tf-trendy-collections tf-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="sc-heading style-2">
+                            <div class="content-left">
+                                <div class="inner">
+                                    <h3>Trendy Contests</h3>
+                                    <p class="desc">Most popular contests on QucikVote </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12" style="margin-top: 40px;">
+
+
+
+                        @foreach ($contests->shuffle()->all() as $contest)
+                            <div class="col-lg-4 col-md-6">
+
+                                <div class="sc-product-item style-2">
+                                    <div class="product-img">
+                                        <a href="{{ route('contest.user.view', $contest->slug) }}"><img
+                                                src="{{ asset($contest->contest_image) }}" alt="Image"></a>
+                                        <a href="{{ route('contest.user.view', $contest->slug) }}"
+                                            class="sc-button style letter"><span>View Contest</span></a>
+                                        <label> ₦ {{ $contest->vote_price }} /Vote</label>
+                                    </div>
+                                    <div class="product-content">
+                                        <h5 class="title"><a
+                                                href="{{ route('contest.user.view', $contest->slug) }}">{{ $contest->contest_name }}</a>
+                                        </h5>
+                                        <div class="product-author flex">
+                                            <div>
+                                                <img src="{{ asset('uploads/vendors/' . $contest->vendor->company_logo) }}"
+                                                    alt="Image" width="60px" class="vendor_logo">
+                                            </div>
+                                            <div class="infor">
+                                                <div class="author-name"><a
+                                                        href="{{ route('contest.user.view', $contest->slug) }}">{{ $contest->vendor->company_name }}</a>
+                                                </div>
+                                                <span>Organizer</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-price flex">
+                                            <div class="title">
+                                                <p style="color:green;">Contest Start Date</p>
+                                                <p style="color:rgb(187, 21, 21);">Contest End Date</p>
+                                            </div>
+
+
+                                            <div class="price">
+                                                <p><span
+                                                        style="color:green;">{{ \Carbon\Carbon::parse($contest->start_date)->diffForHumans() }}</span>
+                                                </p>
+
+                                                <p><span
+                                                        style="color:rgb(187, 21, 21);">{{ \Carbon\Carbon::parse($contest->end_date)->format('d-D-M-Y') }}</span>
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><br><br><br><br>
+
+                            </div>
+                        @endforeach
+
+
+                        <br><br><br><br>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    @endif
+
+
+
+
+
+    {{-- playing --}}
+
+
+
+
+
+
+
+
+
+
+
+    @if (count($contestmultis) && count($contestmultis) > 3)
         <section class="tf-live-auctions tf-section bg-color-1">
             <div class="container">
                 <div class="row">
@@ -165,8 +266,70 @@
 
 
 
+    @if (count($contestmultis) && count($contestmultis) <= 3)
+        <section class="tf-live-auctions tf-section bg-color-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="sc-heading style-2 has-icon">
+                            <div class="content-left">
+
+                                <div class="inner">
+                                    <div class="group">
+                                        <div class="icon"><i class="ripple"></i></div>
+                                        <h3>Multi-Category Contests</h3>
+                                    </div>
+                                    <p class="desc">Explore multi-category contests by brands all over Nigeria.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12" style="margin-top: 40px;">
 
 
+
+                        @foreach ($contestmultis->shuffle()->all() as $contestmulti)
+                            <div class="col-lg-4 col-md-6">
+                                <div class="sc-product-item">
+                                    <div class="product-img active">
+                                        <a href="{{ route('multicontest.user.view', $contestmulti->slug) }}"><img
+                                                src="{{ asset($contestmulti->contest_image) }}" alt="Image"></a>
+
+                                        <a href="{{ route('multicontest.user.view', $contestmulti->slug) }}"
+                                            class="sc-button style letter"><span>View Categories</span></a>
+
+                                    </div>
+                                    <div class="product-content">
+                                        <h5 class="title"><a
+                                                href="{{ route('multicontest.user.view', $contestmulti->slug) }}">{{ $contestmulti->contest_name }}</a>
+                                        </h5>
+                                        <div class="product-author flex">
+
+                                            <img src="{{ asset('uploads/vendors/' . $contestmulti->vendor->company_logo) }}"
+                                                alt="Image" width="60px" class="vendor_logo">
+
+                                            <div class="infor">
+                                                <div class="author-name"><a
+                                                        href="{{ route('multicontest.user.view', $contestmulti->slug) }}">{{ $contestmulti->vendor->company_name }}</a>
+                                                </div>
+                                                <span>Organizer</span>
+                                            </div>
+                                        </div> <br><br><br>
+
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                        <br><br><br>
+
+
+
+
+
+                    </div>
+                </div>
+        </section>
+    @endif -
 
 
 
@@ -277,8 +440,8 @@
                 <div class="col-12 col-lg-6 col-xl-5">
                     <div>
                         <!-- <span class="badge badge-primary-soft p-2">
-                                                                                                                                                                                                                                                  <i class="la la-exclamation ic-3x rotation"></i>
-                                                                                                                                                                                                                                              </span> -->
+                                                                                                                                                                                                                                                                                                                                                              <i class="la la-exclamation ic-3x rotation"></i>
+                                                                                                                                                                                                                                                                                                                                                          </span> -->
                         <h6 style="color:rgb(214, 203, 203)">Trusted By</h6><br>
                         <div class="slider_r">
                             <div class="slide-track">
