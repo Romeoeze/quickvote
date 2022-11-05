@@ -89,8 +89,8 @@
                          Nigeria</p>
 
                      <br>
-                     <a href="https://info.flagcounter.com/oWNq"><img
-                             src="https://s11.flagcounter.com/count2/oWNq/bg_FFFFFF/txt_000000/border_FF9924/columns_2/maxflags_20/viewers_0/labels_0/pageviews_1/flags_0/percent_0/"
+                     <a href="https://info.flagcounter.com/g99H"><img
+                             src="https://s01.flagcounter.com/count2/g99H/bg_0A0A0A/txt_FFD061/border_CCCCCC/columns_2/maxflags_20/viewers_0/labels_0/pageviews_1/flags_0/percent_0/"
                              alt="Flag Counter" border="0"></a>
 
                  </div>
